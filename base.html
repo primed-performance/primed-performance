@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRIMED BASE | 12-Week Off-Season Program | Primed Performance</title>
+<meta name="description" content="PRIMED BASE is a 12-week off-season strength and speed program for club and developing athletes. Built in the off-season. Proven in season. Releases 1 October 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#000097;
+  --navy-deep:#00006b;
+  --coral:#FF4B33;
+  --ink:#0A0A0A;
+  --grey:#F2F2F5;
+  --white:#FFFFFF;
+  --radius:0px;
+  --max:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+h1,h2,h3{line-height:0.98;letter-spacing:.005em}
+h1,h2,.step h3,.half-card h3,.price-card h3{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900;text-transform:uppercase}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:16px}
+.hand{font-family:'Rock Salt',cursive;font-weight:400}
+.btn{display:inline-block;padding:16px 32px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{box-shadow:0 10px 24px rgba(0,0,151,.4)}
+.btn-white{background:#fff;color:var(--navy)}
+.btn-outline-white{border-color:#fff;color:#fff;background:transparent}
+.btn-outline-white:hover{background:#fff;color:var(--navy)}
+
+/* NAV (matches main site) */
+header{background:var(--ink);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav img{height:34px;width:auto}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{color:#fff;text-decoration:none;font-weight:500;font-size:15px}
+.nav-links a:hover{color:var(--coral)}
+.nav .btn{padding:11px 22px;font-size:14px}
+.menu-btn{display:none;background:none;border:none;color:#fff;font-size:28px;cursor:pointer}
+
+/* HERO */
+.base-hero{background:var(--navy);color:#fff;text-align:center;padding:52px 0 60px;position:relative;overflow:hidden}
+.base-hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.base-hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,90,.82),rgba(0,0,110,.9));z-index:0}
+.base-hero::before{content:"★";position:absolute;font-size:520px;color:rgba(255,255,255,.05);top:-80px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;z-index:0}
+.base-hero .wrap{position:relative;z-index:1}
+.base-hero .logo{max-width:440px;margin:0 auto 18px;position:relative;z-index:1}
+.base-hero .tag{font-family:'Rock Salt',cursive;font-size:17px;color:#fff;opacity:.9;margin-bottom:18px}
+.base-hero h1{font-size:clamp(34px,5vw,60px);max-width:820px;margin:0 auto 16px;color:#fff}
+.base-hero p.lede{font-size:18.5px;max-width:600px;margin:0 auto 26px;color:#dcdcf0}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+
+/* COUNTDOWN */
+.countdown{display:flex;gap:14px;justify-content:center;margin:0 auto 26px;position:relative;z-index:1}
+.cd-box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:0;padding:14px 18px;min-width:78px}
+.cd-box .num{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:40px;line-height:1;color:#fff}
+.cd-box .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#b7b7e0;margin-top:4px}
+
+/* STRIP */
+.strip{background:var(--ink);color:#fff;text-align:center;padding:18px 0;font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:20px;letter-spacing:.08em}
+.strip span{color:var(--coral);margin:0 10px}
+
+/* PROBLEM */
+.problem{text-align:center}
+.problem h2{font-size:clamp(30px,4vw,50px);max-width:820px;margin:0 auto 22px}
+.problem h2 em{font-style:italic;color:var(--navy)}
+.problem p{max-width:640px;margin:0 auto;font-size:18px;color:#444}
+
+/* TWO HALVES */
+.halves{background:var(--grey)}
+.halves .head{text-align:center;max-width:680px;margin:0 auto 48px}
+.halves h2{font-size:clamp(30px,4vw,50px)}
+.halves h2 em{font-style:italic;color:var(--navy)}
+.half-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.half-card{background:#fff;border-radius:var(--radius);padding:0 0 40px;border-top:5px solid var(--navy);overflow:hidden}
+.half-card .half-img{width:100%;height:240px;object-fit:cover}
+.half-card .num{font-family:'Rock Salt',cursive;font-size:15px;color:var(--coral);margin:26px 34px 10px}
+.half-card h3{font-size:26px;margin:0 34px 16px}
+.half-card ul{list-style:none;margin:0 34px}
+.half-card li{padding-left:28px;position:relative;margin-bottom:12px;font-size:16px}
+.half-card li::before{content:"";position:absolute;left:0;top:8px;width:14px;height:8px;border-left:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(-45deg)}
+
+/* WHAT YOU GET */
+.get h2{font-size:clamp(30px,4vw,50px);text-align:center;margin-bottom:48px}
+.get h2 em{font-style:italic;color:var(--navy)}
+.get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.get-card{background:var(--grey);border-radius:var(--radius);padding:30px 26px;text-align:center}
+.get-card .ic{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:40px;color:var(--navy);line-height:1;margin-bottom:12px}
+.get-card h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;margin-bottom:8px}
+.get-card p{font-size:15px;color:#555}
+
+/* APP SHOWCASE */
+.app{background:var(--ink);color:#fff}
+.app h2{font-size:clamp(30px,4vw,50px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:14px}
+.app-sub{color:#b9b9c8;font-size:17px}
+.app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:end;max-width:900px;margin:0 auto}
+.app-phone{text-align:center}
+.app-phone img{width:100%;border-radius:0;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.app-phone.tall{transform:translateY(-24px)}
+.app-label{display:block;margin-top:16px;font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:15px;letter-spacing:.06em;color:var(--coral)}
+
+/* JOURNEY */
+.journey{background:var(--navy);color:#fff}
+.journey h2{font-size:clamp(30px,4vw,50px);text-align:center;margin-bottom:14px;color:#fff}
+.journey .sub{text-align:center;max-width:560px;margin:0 auto 48px;color:#c3c3ea}
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.phase{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:30px 26px}
+.phase .wk{font-family:'Rock Salt',cursive;font-size:14px;color:var(--coral);margin-bottom:10px}
+.phase h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:22px;margin-bottom:10px;color:#fff}
+.phase p{font-size:15px;color:#d4d4ee}
+.journey .markers{text-align:center;margin-top:36px;color:#b7b7e0;font-size:15px}
+
+/* WHO FOR */
+.whofor .wrap{max-width:820px}
+.whofor-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+.whofor-card{border-radius:var(--radius);padding:30px 28px}
+.whofor-card.yes{background:#eef7ee;border:1.5px solid #b9dfb9}
+.whofor-card.no{background:#fdeeec;border:1.5px solid #f5c6bf}
+.whofor-card h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:20px;margin-bottom:14px}
+.whofor-card ul{list-style:none}
+.whofor-card li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px}
+.whofor-card.yes li::before{content:"✓";position:absolute;left:0;color:#2e9e2e;font-weight:800}
+.whofor-card.no li::before{content:"✕";position:absolute;left:0;color:var(--coral);font-weight:800}
+
+/* PROOF */
+.proof{background:var(--grey);text-align:center}
+.proof .quote{max-width:720px;margin:0 auto;font-size:22px;font-style:italic;font-weight:600;line-height:1.4}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;text-align:left}
+.proof-card{background:#fff;border-radius:var(--radius);padding:34px 30px;border-top:5px solid var(--navy);display:flex;flex-direction:column;gap:18px}
+.proof-card p{font-size:16.5px;font-style:italic;line-height:1.5}
+.proof .who{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-size:14.5px}
+
+/* PRICING */
+.pricing{text-align:center}
+.pricing h2{font-size:clamp(30px,4vw,50px);margin-bottom:12px}
+.pricing .sub{max-width:560px;margin:0 auto 40px;color:#555}
+.price-card{background:var(--navy);color:#fff;border-radius:0;max-width:460px;margin:0 auto;padding:48px 40px;position:relative;overflow:hidden}
+.price-card::after{content:"★";position:absolute;right:20px;top:-20px;font-size:150px;color:rgba(255,255,255,.06)}
+.price-card .flag{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:20px}
+.price-card h3{font-size:30px;color:#fff;margin-bottom:6px}
+.price-card .amt{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:72px;line-height:1;color:#fff}
+.price-card .amt small{font-size:24px;vertical-align:super}
+.price-card .then{color:#b7b7e0;font-size:15px;margin:10px 0 28px}
+.price-card .then s{opacity:.8}
+.price-card .btn{width:100%}
+.price-note{margin-top:22px;color:#777;font-size:14.5px}
+
+/* SIGNUP */
+.signup{background:var(--ink)}
+.signup-box{background:var(--navy);border-radius:0;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
+.signup-box::after{content:"★";position:absolute;left:-30px;bottom:-60px;font-size:220px;color:rgba(255,255,255,.05);pointer-events:none}
+.signup-copy{position:relative;z-index:1}
+.signup-copy h2{font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:16px}
+.signup-copy h2 .hand{color:#fff;text-transform:none;font-size:0.8em}
+.signup-copy p{color:#dcdcf0;font-size:16.5px;margin-bottom:22px}
+.signup-perks{list-style:none}
+.signup-perks li{padding-left:28px;position:relative;margin-bottom:12px;color:#fff;font-size:15.5px}
+.signup-perks li::before{content:"★";position:absolute;left:0;color:#fff}
+.signup-form{position:relative;z-index:1}
+.form-placeholder{background:rgba(255,255,255,.08);border:2px dashed rgba(255,255,255,.35);border-radius:0;padding:44px 30px;text-align:center;display:flex;flex-direction:column;gap:10px;color:#fff}
+.form-placeholder strong{font-size:17px}
+.form-placeholder span{color:#b7b7e0;font-size:14px}
+
+/* FAQ */
+.faq{background:var(--grey)}
+.faq h2{font-size:clamp(30px,4vw,48px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;margin-bottom:40px}
+.faq details{background:#fff;border-radius:0;margin-bottom:14px;padding:22px 26px;border:1.5px solid transparent}
+.faq details[open]{border-color:var(--navy)}
+.faq summary{font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::after{content:"+";font-size:26px;color:var(--coral)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:14px;font-size:15.5px}
+
+/* FINAL CTA */
+.final{background:var(--navy);color:#fff;text-align:center}
+.final h2{font-size:clamp(34px,4.6vw,58px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:16px}
+.final p{max-width:540px;margin:0 auto 30px;font-size:18px;color:#dcdcf0}
+
+/* FOOTER (matches main site) */
+footer{background:var(--ink);color:#C9C9D4;padding:64px 0 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+footer img{height:32px;width:auto;margin-bottom:18px}
+footer h4{color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer a{color:#C9C9D4;text-decoration:none}
+footer a:hover{color:var(--coral)}
+.foot-bottom{border-top:1px solid #26262E;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:#8A8A96}
+.tagline{font-weight:800;text-transform:uppercase;color:#fff;letter-spacing:.06em}
+.tagline em{color:var(--coral);font-style:italic}
+
+@media (max-width:900px){
+  section{padding:60px 0}
+  .half-grid,.get-grid,.phase-grid,.whofor-grid,.proof-grid,.signup-box,.app-grid,.foot-grid{grid-template-columns:1fr}
+  .app-phone.tall{transform:none}
+  .app-phone{max-width:280px;margin:0 auto}
+  .base-hero .logo{max-width:340px}
+}
+@media (max-width:640px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .get-grid,.foot-grid{grid-template-columns:1fr}
+  .countdown{gap:8px}
+  .cd-box{min-width:64px;padding:12px}
+  .cd-box .num{font-size:32px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img src="images/logo-off-white.png" alt="Primed Performance"></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Coaching</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="free-resources.html">Free Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/form/Y3bJ2JU8Q7nNuZLjguj0">Start Here</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+
+<div class="base-hero">
+  <img class="bg" src="images/base-hero.jpg" alt="">
+  <div class="overlay"></div>
+  <div class="wrap">
+    <img class="logo" src="images/base-logo.png" alt="PRIMED BASE, 12 week off-season program">
+    <p class="tag">Built in the off-season. Proven in season.</p>
+    <h1>The off-season is where next season is won</h1>
+    <p class="lede">A 12-week off-season program that builds real strength and real speed, for club and rep athletes ready to push toward the next level.</p>
+    <div class="countdown" id="countdown" aria-label="Countdown to launch">
+      <div class="cd-box"><div class="num" id="cd-days">--</div><div class="lbl">Days</div></div>
+      <div class="cd-box"><div class="num" id="cd-hours">--</div><div class="lbl">Hours</div></div>
+      <div class="cd-box"><div class="num" id="cd-mins">--</div><div class="lbl">Mins</div></div>
+      <div class="cd-box"><div class="num" id="cd-secs">--</div><div class="lbl">Secs</div></div>
+    </div>
+    <div class="hero-ctas">
+      <!-- PRE-LAUNCH button (email capture). On 1 Oct, swap to the BUY button below. -->
+      <a class="btn btn-white" href="EMAIL_LIST_PLACEHOLDER">Join the list, get $30 off</a>
+      <a class="btn btn-outline-white" href="#what-you-get">See what's inside</a>
+    </div>
+  </div>
+</div>
+
+<div class="strip">Releases 1 October 2026 <span>★</span> Founding price for 14 days only <span>★</span> $69 then $99</div>
+
+<section class="problem">
+  <div class="wrap">
+    <span class="eyebrow">The off-season problem</span>
+    <h2>Most athletes <em>waste</em> the off-season, then pay for it all year</h2>
+    <p>The weeks between seasons are when strength, speed and robustness are actually built. Miss that window and you spend the whole season playing catch-up, underdone, and one bad landing from the sideline. BASE gives you a real plan for those 12 weeks.</p>
+  </div>
+</section>
+
+<section class="halves" id="what-you-get">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">What BASE builds</span>
+      <h2>Two halves, one <em>complete</em> athlete</h2>
+    </div>
+    <div class="half-grid">
+      <div class="half-card">
+        <img class="half-img" src="images/base-strength.jpg" alt="Athlete strength training in the gym">
+        <div class="num">Weeks 1 to 6</div>
+        <h3>Build the base</h3>
+        <ul>
+          <li>Well-rounded base physicality</li>
+          <li>Hypertrophy and strength</li>
+          <li>Robustness and durability</li>
+          <li>Targeted accessory work</li>
+        </ul>
+      </div>
+      <div class="half-card">
+        <img class="half-img" src="images/base-speed.jpg" alt="Athlete sprint and speed training">
+        <div class="num">Weeks 7 to 12</div>
+        <h3>Build the speed</h3>
+        <ul>
+          <li>Maximal aerobic speed and speed technique</li>
+          <li>Acceleration and linear speed</li>
+          <li>Change of direction</li>
+          <li>Repeat sprint ability</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="get">
+  <div class="wrap">
+    <h2>What you <em>get</em></h2>
+    <div class="get-grid">
+      <div class="get-card"><div class="ic">12</div><h3>Weeks, fully written</h3><p>A complete 12-week plan, every session written end to end. No guesswork.</p></div>
+      <div class="get-card"><div class="ic">5</div><h3>Sessions a week</h3><p>3 gym, 1 engine, 1 speed. Structured to build without burning you out.</p></div>
+      <div class="get-card"><div class="ic">★</div><h3>On TrainHeroic</h3><p>Delivered through the gold-standard app, with video demos, cues and tracking.</p></div>
+      <div class="get-card"><div class="ic">RAMP</div><h3>Full warm-ups</h3><p>Every session opens with a RAMP warm up and closes with recovery and flexibility.</p></div>
+      <div class="get-card"><div class="ic">▲</div><h3>Real progression</h3><p>Testing at weeks 1 and 12, planned deloads, and a week 4 landing check that gates your plyos.</p></div>
+      <div class="get-card"><div class="ic">∞</div><h3>Yours to keep</h3><p>A one-off purchase. Run it this off-season, then again next year.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="app">
+  <div class="wrap">
+    <div style="text-align:center;max-width:640px;margin:0 auto 48px">
+      <span class="eyebrow" style="color:#fff">In your pocket</span>
+      <h2>Delivered through <span style="font-style:italic;color:#fff">TrainHeroic</span></h2>
+      <p class="app-sub">The gold-standard training app. Every session, demo, cue and PB in one place, so all you have to do is turn up and execute.</p>
+    </div>
+    <div class="app-grid">
+      <div class="app-phone">
+        <img src="images/base-app-session.png" alt="TrainHeroic session tracking">
+        <span class="app-label">Session tracking</span>
+      </div>
+      <div class="app-phone tall">
+        <img src="images/base-app-demo.png" alt="TrainHeroic exercise demos and working sets">
+        <span class="app-label">Video demos &amp; sets</span>
+      </div>
+      <div class="app-phone">
+        <img src="images/base-app-progress.png" alt="TrainHeroic progress and PB tracking">
+        <span class="app-label">Progress tracking</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="journey">
+  <div class="wrap">
+    <h2>The 12-week journey</h2>
+    <p class="sub">A real periodised build, from base to speed, with recovery planned in.</p>
+    <div class="phase-grid">
+      <div class="phase"><div class="wk">Weeks 1 to 4</div><h3>Build the base</h3><p>Establish strength, movement quality and work capacity. Testing in week 1 sets your baseline.</p></div>
+      <div class="phase"><div class="wk">Weeks 5 to 8</div><h3>Add the load</h3><p>Progress strength and intensity as your base solidifies, with a deload to keep you fresh.</p></div>
+      <div class="phase"><div class="wk">Weeks 9 to 12</div><h3>Convert to speed</h3><p>Turn strength into speed and power. Retest in week 12 to see exactly how far you've come.</p></div>
+    </div>
+    <p class="markers">Deloads at weeks 4, 8 and 12 &nbsp;★&nbsp; Testing at weeks 1 and 12 &nbsp;★&nbsp; Week 4 landing check gates your plyometric progression</p>
+  </div>
+</section>
+
+<section class="whofor">
+  <div class="wrap">
+    <div style="text-align:center;max-width:660px;margin:0 auto">
+      <span class="eyebrow">Is it for you?</span>
+      <h2 style="font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900">Built for athletes chasing the next level</h2>
+    </div>
+    <div class="whofor-grid">
+      <div class="whofor-card yes">
+        <h3>BASE is for you if</h3>
+        <ul>
+          <li>You're a club or rep-level athlete with your eyes on higher levels</li>
+          <li>You want to bridge the gap toward semi-professional</li>
+          <li>You can already squat, hinge and press</li>
+          <li>You've got gym access and want a serious plan, not a workout</li>
+          <li>You're willing to earn the next level in the off-season</li>
+        </ul>
+      </div>
+      <div class="whofor-card no">
+        <h3>It's not for you if</h3>
+        <ul>
+          <li>You're brand new to the gym</li>
+          <li>You want a quick 4-week fix</li>
+          <li>You're after a generic bodybuilding split</li>
+          <li>You're happy staying exactly where you are</li>
+          <li>You won't commit to the full 12 weeks</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <span class="eyebrow">The proof</span>
+    <h2 style="font-size:clamp(26px,3.4vw,40px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;margin-bottom:44px">Real athletes. <span style="font-style:italic;color:var(--navy)">Real</span> gains.</h2>
+    <div class="proof-grid">
+      <div class="proof-card">
+        <p>"Emily's coaching has helped my game so much. I'm stronger on the court and faster in my lateral and vertical movements. She really knows her stuff."</p>
+        <span class="who">Cohen · basketball, club to state at nationals</span>
+      </div>
+      <div class="proof-card">
+        <p>"The programming and videos work really well for me. I could do it at my own pace, and I've noticed a big difference in my basketball game. It's all positive."</p>
+        <span class="who">Jazzy · basketball</span>
+      </div>
+      <div class="proof-card">
+        <p>"I have loved Em's coaching! I have developed so much this year already with strength, technique and confidence in my training, all thanks to Em!"</p>
+        <span class="who">Piper</span>
+      </div>
+      <div class="proof-card">
+        <p>"Would highly recommend this program for any aspiring young athlete. Emily has a high level of expertise in optimising training for each athlete's chosen sport."</p>
+        <span class="who">Aydan</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">Founding offer</span>
+    <h2>Get in at the <span style="font-style:italic;color:var(--navy)">founding</span> price</h2>
+    <p class="sub">For the first 14 days only, BASE is $69. From 15 October it's $99, for good.</p>
+    <div class="price-card">
+      <span class="flag">First 14 days only</span>
+      <h3>Primed Base</h3>
+      <div class="amt"><small>$</small>69</div>
+      <p class="then">Founding price to 14 Oct &nbsp;·&nbsp; then <s>$99</s> from 15 Oct</p>
+      <!-- BEFORE 1 OCT: email capture. FROM 1 OCT: swap href to the real BUY link. -->
+      <a class="btn btn-white" href="EMAIL_LIST_PLACEHOLDER">Join the list for the early bird code</a>
+    </div>
+    <p class="price-note">Join the email list now and you'll get an early bird code for $30 off when BASE drops on 1 October.</p>
+  </div>
+</section>
+
+<section class="signup" id="join">
+  <div class="wrap">
+    <div class="signup-box">
+      <div class="signup-copy">
+        <span class="eyebrow" style="color:#fff">Early bird list</span>
+        <h2>Get <span class="hand">$30 off</span> when BASE drops</h2>
+        <p>Join the VIP list now and you'll get your early bird code before anyone else, plus first access the moment BASE goes live on 1 October. No spam, just the drop.</p>
+        <ul class="signup-perks">
+          <li>Your $30 off code, sent straight to your inbox</li>
+          <li>First access on launch day, 1 October</li>
+          <li>Behind-the-scenes on what's inside BASE</li>
+        </ul>
+      </div>
+      <div class="signup-form">
+        <!-- GHL FORM EMBED GOES HERE.
+             In GHL: Sites > Forms > build the "PRIMED BASE VIP list" form (fields below),
+             then Integrate > Embed > copy the iframe and paste it in place of this placeholder box. -->
+        <div class="form-placeholder">
+          <strong>Your GHL VIP signup form embeds here</strong>
+          <span>First name · Email · Sport · (button: Send me my code)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>Questions about BASE</h2>
+    <details><summary>When does BASE release?</summary><p>BASE releases on 1 October 2026. Join the email list before then and you'll get an early bird code for $30 off, plus first access on launch day.</p></details>
+    <details><summary>What do I need to run it?</summary><p>Gym access and the ability to already squat, hinge and press. BASE is not a beginner program, it assumes you've got the fundamentals and want a real off-season plan built on top of them.</p></details>
+    <details><summary>How is it delivered?</summary><p>Through TrainHeroic, the gold-standard training app. Every session is written end to end with video demonstrations, coaching cues, weight tracking and your testing data all in one place.</p></details>
+    <details><summary>How much time per week?</summary><p>Five sessions: three gym, one engine (conditioning) and one speed. It's structured to build you without burning you out across the off-season.</p></details>
+    <details><summary>Is this coaching?</summary><p>BASE is a structured program, not 1:1 coaching. It's the option for athletes who want a Primed Performance program but aren't ready to commit to full online coaching. If you want individual coaching, that's on the coaching page.</p></details>
+    <details><summary>Do I keep it?</summary><p>Yes. BASE is a one-off purchase. Run it this off-season, then run it back next year.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Win the off-season</h2>
+    <p>BASE drops 1 October. Get on the list now for your early bird code and $30 off.</p>
+    <a class="btn btn-white" href="EMAIL_LIST_PLACEHOLDER">Join the list, get $30 off</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo-off-white.png" alt="Primed Performance">
+        <p class="tagline">Helping all athletes reach their <em>prime</em> and stay there</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Online Coaching</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="free-resources.html">Free Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@primedperformance.com.au">info@primedperformance.com.au</a></li>
+          <li><a href="https://www.instagram.com/primed.performance/">Instagram @primed.performance</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100090599381976">Facebook</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Primed Performance · All rights reserved</span>
+      <span>#GETPRIMED ✰</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+// Countdown to 1 October 2026, 00:00 AEST (UTC+10)
+const launch = new Date("2026-10-01T00:00:00+10:00").getTime();
+function tick(){
+  const now = Date.now();
+  let d = Math.max(0, launch - now);
+  const days = Math.floor(d/86400000); d -= days*86400000;
+  const hrs = Math.floor(d/3600000); d -= hrs*3600000;
+  const mins = Math.floor(d/60000); d -= mins*60000;
+  const secs = Math.floor(d/1000);
+  const set = (id,v)=>{const el=document.getElementById(id); if(el) el.textContent=String(v).padStart(2,'0');};
+  set('cd-days',days); set('cd-hours',hrs); set('cd-mins',mins); set('cd-secs',secs);
+}
+tick(); setInterval(tick,1000);
+
+// Mobile menu
+const nb = document.querySelector('.menu-btn');
+if(nb) nb.addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
+</script>
+
+</body>
+</html>
