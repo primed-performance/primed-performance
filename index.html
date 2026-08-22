@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Strength &amp; Conditioning Coaching for Athletes | Primed Performance</title>
+<meta name="description" content="Primed Performance delivers evidence-based online strength and conditioning coaching for developing athletes. University-qualified coaching, wherever you are in the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#0000F5;
+  --coral:#FF4B33;
+  --navy:#000097;
+  --ink:#0A0A0A;
+  --grey:#F2F2F5;
+  --white:#FFFFFF;
+  --radius:0px;
+  --max:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+h1,h2,h3{line-height:0.98;letter-spacing:.005em}
+h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.btn{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--navy);outline-offset:3px}
+.btn-coral{background:var(--coral);color:var(--white)}
+.btn-coral:hover{box-shadow:0 10px 24px rgba(255,75,51,.35)}
+.btn-outline{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-outline:hover{background:var(--ink);color:var(--white)}
+.btn-white{background:var(--white);color:var(--blue)}
+
+/* NAV */
+header{background:var(--ink);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav img{height:34px;width:auto}
+.nav-links{display:flex;gap:30px;align-items:center;list-style:none}
+.nav-links a{color:var(--white);text-decoration:none;font-weight:500;font-size:15px}
+.nav-links a:hover{color:var(--coral)}
+.nav .btn{padding:11px 22px;font-size:14px}
+.menu-btn{display:none;background:none;border:none;color:var(--white);font-size:28px;cursor:pointer}
+
+/* HERO */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--ink)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(10,10,10,.85) 0%,rgba(10,10,10,.6) 45%,rgba(10,10,10,.35) 100%);z-index:1}
+.hero-content{position:relative;z-index:2;max-width:1000px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1.5px solid rgba(255,255,255,.4);color:#fff;border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;margin-bottom:26px;backdrop-filter:blur(4px)}
+.badge::before{content:"✰";color:var(--coral)}
+.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:900;text-transform:uppercase;color:#fff;max-width:14ch}
+.hero h1 em{font-style:italic;color:#fff}
+.hero p.lede{font-size:19px;margin:24px 0 32px;max-width:620px;color:#eaeaf2}
+.hero p.lede strong{font-style:italic;color:#fff}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.micro{font-size:14px;color:#c9c9d4;max-width:600px}
+.btn-outline-light{border-color:#fff;color:#fff;background:transparent}
+.btn-outline-light:hover{background:#fff;color:var(--ink)}
+
+/* MARQUEE */
+.marquee{background:var(--blue);color:var(--white);overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee-track{display:inline-block;animation:scroll 22s linear infinite;font-weight:800;font-size:20px;letter-spacing:.12em;text-transform:uppercase}
+.marquee-track span{margin:0 24px}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* POSITIONING / MEET EM */
+.meet-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:center}
+.meet-grid img{border-radius:var(--radius);height:560px;width:100%;object-fit:cover}
+.meet h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:22px}
+.meet h2 em{font-style:italic;color:var(--coral)}
+.quote-block{border-left:5px solid var(--blue);padding:6px 0 6px 22px;font-size:20px;font-style:italic;font-weight:600;margin:26px 0}
+.meet p{margin-bottom:16px}
+
+/* STEPS */
+.steps{background:var(--ink);color:var(--white)}
+.steps h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:14px}
+.steps .sub{max-width:640px;margin-bottom:48px;color:#CFCFDA}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:#141418;border:1px solid #26262E;border-radius:var(--radius);padding:30px 26px}
+.step .num{font-size:15px;font-weight:800;color:var(--coral);letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:12px}
+.step h3{font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
+.step p{font-size:15.5px;color:#C9C9D4}
+.steps .cta-row{margin-top:44px;text-align:center}
+
+/* WHY */
+.why h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:48px;max-width:760px}
+.why h2 em{font-style:italic;color:var(--blue)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.why-card{background:var(--grey);border-radius:var(--radius);padding:32px 28px}
+.why-card .star{color:var(--coral);font-size:24px;display:block;margin-bottom:14px}
+.why-card h3{font-size:19px;font-weight:800;margin-bottom:10px}
+.why-card p{font-size:15.5px}
+
+/* TESTIMONIALS */
+.proof{background:var(--navy);color:var(--white)}
+.proof h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:48px}
+.proof h2 em{font-style:italic;color:var(--coral)}
+.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.t-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);padding:30px 26px;display:flex;flex-direction:column;gap:18px}
+.t-card p{font-size:15.5px;font-style:italic}
+.t-card .who{font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:var(--coral)}
+
+/* FREEBIES */
+.free h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:12px}
+.free h2 em{font-style:italic;color:var(--blue)}
+.free .sub{max-width:600px;margin-bottom:44px}
+.free-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.free-card{background:var(--grey);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;gap:20px;align-items:flex-start}
+.free-card img{border-radius:0;height:260px;width:100%;object-fit:cover}
+.free-card h3{font-size:21px;font-weight:800;text-transform:uppercase}
+
+/* FAQ */
+.faq{background:var(--grey)}
+.faq h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:40px}
+.faq details{background:var(--white);border-radius:0;margin-bottom:14px;padding:22px 26px;border:1.5px solid transparent}
+.faq details[open]{border-color:var(--blue)}
+.faq summary{font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::after{content:"+";font-size:26px;font-weight:400;color:var(--coral);flex-shrink:0}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:14px;font-size:15.5px}
+
+/* CTA BAND */
+.cta-band{background:var(--coral);color:var(--white);text-align:center}
+.cta-band h2{font-size:clamp(34px,4.6vw,60px);font-weight:900;text-transform:uppercase;margin-bottom:16px}
+.cta-band p{max-width:560px;margin:0 auto 32px;font-size:18px}
+
+/* FOOTER */
+footer{background:var(--ink);color:#C9C9D4;padding:64px 0 32px;font-size:15px}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:48px}
+footer img{height:32px;width:auto;margin-bottom:18px}
+footer h4{color:var(--white);font-size:13px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:16px}
+footer ul{list-style:none}
+footer li{margin-bottom:10px}
+footer a{color:#C9C9D4;text-decoration:none}
+footer a:hover{color:var(--coral)}
+.foot-bottom{border-top:1px solid #26262E;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13.5px;color:#8A8A96}
+.tagline{font-weight:800;text-transform:uppercase;color:var(--white);letter-spacing:.06em}
+.tagline em{color:var(--coral);font-style:italic}
+
+/* ANIMATIONS & ENGAGEMENT */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+.hero .badge,.hero h1,.hero p.lede,.hero-ctas,.micro{animation:rise .8s ease both}
+.hero .badge{animation-delay:.05s}.hero h1{animation-delay:.15s}.hero p.lede{animation-delay:.3s}.hero-ctas{animation-delay:.45s}.micro{animation-delay:.55s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.btn{position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-90%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg)}
+.btn:hover::after{animation:shine .7s ease}
+@keyframes shine{to{left:140%}}
+.float-cta{position:fixed;right:20px;bottom:20px;z-index:60;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease}
+.float-cta.show{opacity:1;pointer-events:auto;transform:none}
+.float-cta .btn{box-shadow:0 12px 30px rgba(255,75,51,.45)}
+.why-card .icon{width:44px;height:44px;color:var(--ink);margin-bottom:16px;transform:skewX(-6deg)}
+.why-card[style*="blue"] .icon{color:#fff}
+.icon .g{stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.icon .c{stroke:var(--coral);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.step .icon{width:38px;height:38px;color:var(--coral);margin-bottom:14px;transform:skewX(-6deg)}
+.step .icon .g{stroke:#fff}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .hero .badge,.hero h1,.hero p.lede,.hero-ctas,.micro{animation:none}
+  .btn:hover::after{animation:none}
+}
+
+.why-card .icon .c,.step .icon .c{transition:transform .4s ease}
+.why-card:hover .icon .c,.step:hover .icon .c{transform:translateX(3px) skewX(-4deg)}
+@media (prefers-reduced-motion:reduce){
+  .why-card:hover .icon .c,.step:hover .icon .c{transform:none}
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+  section{padding:64px 0}
+  .meet-grid,.free-grid{grid-template-columns:1fr}
+  .step-grid,.why-grid,.proof-grid{grid-template-columns:1fr 1fr}
+  .hero{min-height:78vh}
+  .meet-grid img{height:420px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}
+  .nav-links.open{display:flex}
+  .menu-btn{display:block}
+  .step-grid,.why-grid,.proof-grid,.foot-grid{grid-template-columns:1fr}
+  .hero{min-height:80vh}
+  .hero h1{max-width:100%;font-size:clamp(38px,11vw,56px)}
+  .hero p.lede{font-size:17px}
+  .hero-overlay{background:linear-gradient(180deg,rgba(10,10,10,.6),rgba(10,10,10,.8))}
+  .hero-ctas{flex-direction:column;align-items:stretch}
+  .hero-ctas .btn{text-align:center}
+}
+
+/* DEPTH ICONS (feature badges) */
+.dicon{width:74px;height:74px;margin-bottom:18px;filter:drop-shadow(0 8px 14px rgba(0,0,151,.28))}
+.why-card .dicon{margin-bottom:18px}
+.step .dicon{width:58px;height:58px;margin-bottom:14px}
+.svc-card .dicon{width:82px;height:82px}
+
+/* PAGE HEADER (inner pages) */
+.page-head{background:var(--ink);color:#fff;padding:80px 0 72px;text-align:center}
+.page-head h1{font-size:clamp(44px,6vw,80px);font-weight:900;text-transform:uppercase;line-height:0.98}
+.page-head h1 em{font-style:italic;color:var(--coral)}
+.page-head p{max-width:620px;margin:20px auto 0;color:#cfcfda;font-size:18px}
+.page-head .eyebrow{color:var(--coral)}
+
+/* GENERIC CONTENT */
+.lead-copy{max-width:760px;margin:0 auto;font-size:18.5px}
+.lead-copy p{margin-bottom:20px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.split img{border-radius:var(--radius);width:100%;height:520px;object-fit:cover}
+.split h2{font-size:clamp(30px,4vw,48px);font-weight:900;text-transform:uppercase;margin-bottom:20px}
+.split h2 em{font-style:italic;color:var(--blue)}
+.split p{margin-bottom:16px}
+
+/* SERVICES / PRICING CARDS */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc-card{background:var(--white);border:1.5px solid #E4E4EC;border-radius:var(--radius);padding:36px 30px;display:flex;flex-direction:column}
+.svc-card.feature{border-color:var(--blue);box-shadow:0 16px 40px rgba(0,0,151,.14);position:relative}
+.svc-card .flag{position:absolute;top:-13px;left:30px;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
+.svc-card h3{font-size:26px;font-weight:900;text-transform:uppercase;margin:6px 0 4px}
+.svc-card .price{font-size:16px;color:#666;margin-bottom:18px}
+.svc-card ul{list-style:none;margin-bottom:26px}
+.svc-card li{padding-left:28px;position:relative;margin-bottom:12px;font-size:15.5px}
+.svc-card li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:9px;border-left:2.5px solid var(--coral);border-bottom:2.5px solid var(--coral);transform:rotate(-45deg)}
+.svc-card .btn{margin-top:auto}
+
+/* BLOG */
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.post{background:var(--white);border-radius:var(--radius);overflow:hidden;border:1.5px solid #E4E4EC;display:flex;flex-direction:column}
+.post img{height:200px;width:100%;object-fit:cover}
+.post .body{padding:24px;display:flex;flex-direction:column;flex:1}
+.post .tag{font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.post h3{font-size:21px;font-weight:800;line-height:1.15;margin-bottom:10px}
+.post p{font-size:14.5px;color:#555;margin-bottom:18px}
+.post a.read{margin-top:auto;font-weight:700;color:var(--coral);text-decoration:none}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.contact-info h3{font-size:22px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.contact-info .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
+.contact-info .row svg{width:26px;height:26px;color:var(--coral);flex-shrink:0;margin-top:2px}
+.contact-embed{background:var(--grey);border-radius:var(--radius);padding:34px;min-height:520px}
+
+@media (max-width:900px){
+  .split,.contact-grid{grid-template-columns:1fr}
+  .split img{height:360px}
+  .svc-grid,.blog-grid{grid-template-columns:1fr}
+}
+
+/* LEAD MODAL */
+.lead-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px}
+.lead-modal.open{display:flex}
+.lead-backdrop{position:absolute;inset:0;background:rgba(10,10,10,.72);backdrop-filter:blur(3px)}
+.lead-card{position:relative;z-index:1;background:var(--navy);color:#fff;max-width:460px;width:100%;padding:48px 40px 40px;text-align:center;overflow:hidden;animation:leadpop .35s ease both}
+.lead-card::after{content:"";position:absolute;right:-40px;bottom:-60px;width:220px;height:220px;background:url('images/star-white.png');background-size:contain;background-repeat:no-repeat;opacity:.08;pointer-events:none}
+@keyframes leadpop{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
+.lead-close{position:absolute;top:16px;right:18px;background:none;border:none;color:#fff;font-size:30px;line-height:1;cursor:pointer;opacity:.7}
+.lead-close:hover{opacity:1}
+.lead-eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;margin-bottom:18px;position:relative;z-index:1}
+.lead-card h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(28px,6vw,40px);line-height:1;margin-bottom:14px;position:relative;z-index:1}
+.lead-card h3 em{font-style:italic;color:#fff}
+.lead-card p{font-size:16px;color:#dcdcf0;margin-bottom:26px;position:relative;z-index:1}
+.lead-card .lead-cta{position:relative;z-index:1;width:100%;text-align:center}
+.lead-dismiss{display:block;margin:16px auto 0;background:none;border:none;color:#b7b7e0;font-size:14px;cursor:pointer;text-decoration:underline;position:relative;z-index:1}
+.lead-dismiss:hover{color:#fff}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs>
+<linearGradient id="pp-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1a1aff"/><stop offset="1" stop-color="#000097"/></linearGradient>
+<linearGradient id="pp-mtl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#c9d0ff"/></linearGradient>
+<radialGradient id="pp-glow" cx="0.5" cy="0.35" r="0.7"><stop offset="0" stop-color="#FF4B33" stop-opacity="0.5"/><stop offset="1" stop-color="#FF4B33" stop-opacity="0"/></radialGradient>
+</defs>
+
+<symbol id="ic-results" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="30" r="19" fill="url(#pp-glow)"/><path d="M22 16h20v8a10 10 0 0 1-20 0v-8z" fill="url(#pp-mtl)"/><path d="M22 18h-5v3a6 6 0 0 0 6 6M42 18h5v3a6 6 0 0 1-6 6" fill="none" stroke="#c9d0ff" stroke-width="2.4" stroke-linecap="round"/><rect x="28" y="34" width="8" height="7" fill="#aeb8ff"/><rect x="23" y="41" width="18" height="5" rx="2" fill="url(#pp-mtl)"/><path d="M27 22l2.2 2.2L34 20" stroke="#FF4B33" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="ic-qualified" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="30" r="18" fill="url(#pp-glow)"/><path d="M32 18 15 26l17 8 17-8-17-8z" fill="url(#pp-mtl)"/><path d="M22 30v7c0 2.6 4.5 5 10 5s10-2.4 10-5v-7" fill="none" stroke="#aeb8ff" stroke-width="2.6" stroke-linecap="round"/><path d="M49 26v9" stroke="#c9d0ff" stroke-width="2.4" stroke-linecap="round"/><circle cx="49" cy="37" r="2.3" fill="#FF4B33"/>
+</symbol>
+
+<symbol id="ic-sport" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="18" fill="url(#pp-glow)"/><path d="M32 16 20 46h24L32 16z" fill="#FF4B33"/><path d="M32 16 26 46h-6L32 16z" fill="#fff" opacity="0.18"/><rect x="25.5" y="33" width="13" height="4.5" rx="1" fill="#fff" opacity="0.85"/><rect x="16" y="46" width="32" height="5" rx="2.5" fill="url(#pp-mtl)"/>
+</symbol>
+
+<symbol id="ic-video" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="30" cy="32" r="17" fill="url(#pp-glow)"/><rect x="15" y="22" width="24" height="20" rx="4" fill="url(#pp-mtl)"/><path d="M39 28l9-5v18l-9-5v-8z" fill="#aeb8ff"/><path d="M25 27l8 5-8 5V27z" fill="#FF4B33"/>
+</symbol>
+
+<symbol id="ic-programs" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="17" fill="url(#pp-glow)"/><rect x="23" y="15" width="18" height="34" rx="5" fill="url(#pp-mtl)"/><rect x="26" y="20" width="12" height="20" rx="2" fill="#000097" opacity="0.85"/><path d="M29 30h6M31 27v6M35 27v6" stroke="#FF4B33" stroke-width="2.2" stroke-linecap="round"/><circle cx="32" cy="45" r="1.6" fill="#aeb8ff"/>
+</symbol>
+
+<symbol id="ic-coaching" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="30" r="17" fill="url(#pp-glow)"/><path d="M17 22a5 5 0 0 1 5-5h20a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5H28l-8 6v-6h-3z" fill="url(#pp-mtl)"/><path d="M31 24l-3 5h4l-3 5" stroke="#FF4B33" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="ic-strength" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="17" fill="url(#pp-glow)"/><rect x="14" y="20" width="9" height="24" rx="3" fill="url(#pp-mtl)"/><rect x="41" y="20" width="9" height="24" rx="3" fill="url(#pp-mtl)"/><rect x="9" y="26" width="5" height="12" rx="2" fill="#aeb8ff"/><rect x="50" y="26" width="5" height="12" rx="2" fill="#aeb8ff"/><rect x="23" y="30" width="18" height="4" rx="2" fill="#c9d0ff"/><rect x="29" y="29.5" width="6" height="5" rx="1.5" fill="#FF4B33"/>
+</symbol>
+
+<symbol id="ic-progress" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="17" fill="url(#pp-glow)"/><path d="M16 44h32" stroke="#aeb8ff" stroke-width="3" stroke-linecap="round"/><path d="M17 41c4-2 6-8 8-14 1.6 4 2.5 10 4 14" fill="none" stroke="url(#pp-mtl)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M29 41c2-6 4-14 8-18 3 4 5 12 6 18" fill="none" stroke="url(#pp-mtl)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 30c5-3 9-2 12 1" stroke="#FF4B33" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+</symbol>
+
+<symbol id="ic-star" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="19" fill="url(#pp-glow)"/><path d="M32 15l4 13 13 4-13 4-4 13-4-13-13-4 13-4 4-13z" fill="#FF4B33"/><path d="M32 15l4 13 13 4-13 4-4 13z" fill="#fff" opacity="0.18"/>
+</symbol>
+
+<symbol id="ic-clipboard" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="32" r="17" fill="url(#pp-glow)"/><rect x="18" y="16" width="28" height="34" rx="4" fill="url(#pp-mtl)"/><rect x="26" y="13" width="12" height="7" rx="2.5" fill="#aeb8ff"/><path d="M24 34l4 4 8-9" stroke="#FF4B33" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 44h16" stroke="#000097" stroke-width="2.4" stroke-linecap="round" opacity="0.5"/>
+</symbol>
+
+<symbol id="ic-meeting" viewBox="0 0 64 64">
+<rect x="4" y="4" width="56" height="56" rx="18" fill="url(#pp-bg)"/><rect x="4" y="4" width="56" height="28" rx="18" fill="#fff" opacity="0.08"/><circle cx="32" cy="30" r="17" fill="url(#pp-glow)"/><path d="M14 20a4 4 0 0 1 4-4h16a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H24l-7 5v-5h-3z" fill="url(#pp-mtl)"/><path d="M32 26a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v9a4 4 0 0 1-4 4v4l-6-4h-6a4 4 0 0 1-4-4" fill="#aeb8ff"/><circle cx="22" cy="25" r="1.8" fill="#FF4B33"/><circle cx="28" cy="25" r="1.8" fill="#FF4B33"/>
+</symbol>
+
+</svg>
+
+
+<header>
+  <div class="wrap nav">
+    <a href="index.html"><img src="images/logo-off-white.png" alt="Primed Performance"></a>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Coaching</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="free-resources.html">Free Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start Here</a></li>
+      </ul>
+    </nav>
+    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<div class="hero">
+  <video class="hero-video" autoplay loop muted playsinline poster="images/hero-poster.jpg">
+    <source src="images/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <span class="badge">University-qualified Exercise &amp; Sport Scientist</span>
+    <h1>Online coaching where athletes reach their <em>prime</em> &amp; stay there</h1>
+    <p class="lede">Most athletes train hard. <strong>Very few train smart.</strong> Primed gives developing athletes the same evidence-based coaching elite athletes get, built around your sport, your schedule and your goals.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here, tell me about you</a>
+      <a class="btn btn-outline-light" href="#how">See how it works</a>
+    </div>
+    <p class="micro">Taking new athletes now · Trusted by athletes across netball, basketball, AFL, rugby union, rugby league, football, track, martial arts, recreational athletes &amp; many more sporting codes · Coaching worldwide</p>
+  </div>
+</div>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span>
+  </div>
+</div>
+
+<section class="meet">
+  <div class="wrap meet-grid">
+    <img src="images/em-coaching-athlete.jpg" alt="Em, founder of Primed Performance">
+    <div>
+      <span class="eyebrow">Meet Em ✰</span>
+      <h2>Built by an athlete who <em>missed out</em> on this</h2>
+      <p>Hey, I'm Em, a university-qualified exercise and sport scientist specialising in strength &amp; conditioning for individual and team athletes.</p>
+      <div class="quote-block">"I don't think athletes don't work hard enough. It's that they don't have the education to know what to do."</div>
+      <p>I grew up playing sport in regional NSW, where proper coaching just wasn't there. Moving to Sydney for Premier League netball showed me exactly what I'd been missing.</p>
+      <p>Primed exists so no athlete has to trade location for quality coaching. No generic programs, no shortcuts. Just evidence-based preparation that drives results when it matters.</p>
+      <p style="margin-top:24px"><a class="btn btn-outline" href="about.html">More about Em</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="how">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--coral)">How to work with us</span>
+    <h2>Your coaching journey, step by step</h2>
+    <p class="sub">Structured, evidence-based coaching tailored to your sport and goals, with Em in your corner from day one.</p>
+    <div class="step-grid">
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-clipboard"/></svg><span class="num">Step 1</span><h3>Expression of interest</h3><p>Complete the form so we can check we're the right fit for each other. Coach Em will personally be in touch within 24 to 48 hours.</p></div>
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-meeting"/></svg><span class="num">Step 2</span><h3>Initial set up meeting</h3><p>We review your training load, competition schedule and goals, pinpoint the gaps and map out your road to success.</p></div>
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-progress"/></svg><span class="num">Step 3</span><h3>Performance assessment</h3><p>You complete a targeted assessment based on your sport and goals. These measures provide the objective data that informs your program design.</p></div>
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-programs"/></svg><span class="num">Step 4</span><h3>Program delivery</h3><p>Your individualised program is delivered through TrainHeroic, with load management, video demos, coaching cues and progress tracking. Programs run a minimum of 12 weeks to ensure real progression.</p></div>
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-coaching"/></svg><span class="num">Step 5</span><h3>Coaching &amp; execution</h3><p>This is not a program-only service. You engage directly with a university-qualified exercise and sport scientist, with weekly check-ins and video feedback.</p></div>
+      <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-results"/></svg><span class="num">Step 6</span><h3>Review &amp; progress</h3><p>Depending on your membership level, we connect monthly or fortnightly to review progress, refine programming and plan upcoming phases for long-term development.</p></div>
+    </div>
+    <div class="cta-row"><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here</a></div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <span class="eyebrow">Why Primed</span>
+    <h2>Six reasons athletes <em>choose</em> Primed Performance</h2>
+    <div class="why-grid">
+      <div class="why-card" style="background:var(--blue);color:#fff"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-results"/></svg><h3>Our athletes get results</h3><p style="color:#E6E6FF">State team selections. PBs hit in the gym. Records broken on the track and field, with seconds shaved off performances. The proof is in the outcomes.</p></div>
+      <div class="why-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-qualified"/></svg><h3>University-qualified coaching</h3><p>Every decision is made by a qualified exercise and sport scientist, guided by evidence, data and the demands of your sport. Not trends or guesswork.</p></div>
+      <div class="why-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-sport"/></svg><h3>Built for your sport</h3><p>Training is planned around your competition calendar, position and progression needs, with ongoing assessment and refinement rather than static programs.</p></div>
+      <div class="why-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-video"/></svg><h3>Video technique analysis</h3><p>Submit footage for structured review and feedback. One of the most effective tools for performance improvement and long-term development.</p></div>
+      <div class="why-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-programs"/></svg><h3>Gold-standard delivery</h3><p>Programs live in TrainHeroic, with video demonstrations, coaching cues, weight tracking and secure storage of your testing data and personal bests.</p></div>
+      <div class="why-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-coaching"/></svg><h3>Direct access to your coach</h3><p>Weekly check-ins and video feedback with Em herself. Real coaching with accountability over a minimum 12 weeks, not a PDF and a goodbye.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--coral)">#GetPrimed</span>
+    <h2>Hear from our <em>athletes</em></h2>
+    <div class="proof-grid">
+      <div class="t-card"><p>"The programming and videos work really well for me. I could do it at my own pace, and I've noticed a big difference in my basketball game. It's all positive."</p><span class="who">Jazzy · NSW country basketballer</span></div>
+      <div class="t-card"><p>"I have loved Em's coaching! I have developed so much this year already with strength, technique and confidence in my training, all thanks to Em!"</p><span class="who">Piper · middle distance track athlete</span></div>
+      <div class="t-card"><p>"Emily's coaching has helped my game so much. I'm stronger on the court and faster in my lateral and vertical movements. She really knows her stuff."</p><span class="who">Cohen · NSW country basketballer</span></div>
+      <div class="t-card"><p>"As an older woman with ongoing injuries, joining Em has been fantastic. She's very knowledgeable and always tailors alternative exercises to suit my needs."</p><span class="who">Lisa · recreational long distance runner</span></div>
+      <div class="t-card"><p>"Would highly recommend this program for any aspiring young athlete. Emily has a high level of expertise in optimising training for each athlete's chosen sport."</p><span class="who">Aydan · Sydney grade cricketer</span></div>
+      <div class="t-card" style="justify-content:center;align-items:flex-start"><p style="font-style:normal;font-weight:800;font-size:22px;text-transform:uppercase">Ready to write your own?</p><a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Click here to start</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="free">
+  <div class="wrap">
+    <span class="eyebrow">Freebies ✰</span>
+    <h2>Not ready for coaching <em>yet?</em></h2>
+    <p class="sub">Grab one of these free guides and start improving today.</p>
+    <div class="free-grid">
+      <div class="free-card">
+        <img src="images/freebie-blueprint.png" alt="The Get Primed Blueprint free guide">
+        <h3>The Get Primed Blueprint</h3>
+        <a class="btn btn-coral" href="https://go.acr.fit/widget/form/OOQAW0dYfFvwMSqLSVO8">Download free</a>
+      </div>
+      <div class="free-card">
+        <img src="images/freebie-inseason.png" alt="The In-Season Training Guide free ebook">
+        <h3>The In-Season Training Guide</h3>
+        <a class="btn btn-coral" href="https://go.acr.fit/widget/form/snXPI4PEbDQSpRn2hJTv">Download free</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap">
+    <span class="eyebrow">FAQ</span>
+    <h2>Frequently asked questions</h2>
+    <details><summary>How do you monitor technique and ensure I'm lifting or moving correctly?</summary><p>Coaching goes far beyond providing a program. Technique is monitored through structured video analysis, where you submit footage for review and feedback. Video is one of the most effective tools for performance improvement, self-awareness and long-term development.</p></details>
+    <details><summary>Do I have to be "elite" to work with you?</summary><p>No, you don't need to be competing at an elite level. But you do need an elite attitude. Working with a coach requires commitment, consistency and ownership. We work with athletes who are ready to show up, apply the process and make meaningful change.</p></details>
+    <details><summary>What makes you different to an online personal trainer?</summary><p>This service focuses on long-term athlete development, performance outcomes and evidence-based decision-making. Training is planned around your sport, competition calendar and progression needs, with ongoing assessment rather than static programs.</p></details>
+    <details><summary>What is an exercise &amp; sport scientist?</summary><p>A university-qualified professional trained in human movement, physiology, biomechanics, performance analysis and training prescription. At Primed Performance, every decision is guided by evidence, data and the specific demands of your sport, not trends or guesswork.</p></details>
+    <details><summary>Why do I have to pay for the set up session?</summary><p>The set-up session is a strategy session, not a discovery call. Your enquiry form already provides foundational information, so we come prepared with direction. During the session we assess your current training load, clarify priorities and map out a clear plan.</p></details>
+    <details><summary>Why do I have to commit for 12 weeks?</summary><p>Meaningful change takes time and consistency. Strength, resilience and performance development require structured progression. A 12-week commitment ensures you fully engage in the process, build momentum and experience real, sustainable improvement.</p></details>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to get primed?</h2>
+    <p>Tell me about you, your sport and your goals, and let's see if we're the right fit for each other.</p>
+    <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/logo-off-white.png" alt="Primed Performance">
+        <p class="tagline">Helping all athletes reach their <em>prime</em> and stay there</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Online Coaching</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="free-resources.html">Free Resources</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:info@primedperformance.com.au">info@primedperformance.com.au</a></li>
+          <li><a href="https://www.instagram.com/primed.performance/">Instagram @primed.performance</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100090599381976">Facebook</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Primed Performance · All rights reserved</span>
+      <span>#GETPRIMED ✰</span>
+    </div>
+  </div>
+</footer>
+
+<div class="float-cta" id="floatCta">
+  <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here ✰</a>
+</div>
+
+<!-- GHL WEBCHAT: paste your GoHighLevel chat widget embed code on the line below.
+     In GHL: Sites > Chat Widget > copy the embed script. Messages will land straight in your CRM. -->
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.step,.why-card,.t-card,.free-card,.free h2,.why h2,.proof h2,.steps h2,.meet-grid > *,.faq details').forEach(el => {
+  el.classList.add('reveal');
+  io.observe(el);
+});
+const fc = document.getElementById('floatCta');
+addEventListener('scroll', () => {
+  fc.classList.toggle('show', scrollY > 700);
+}, { passive: true });
+
+// Performance Leak Assessment popup — shows once per session, ~6s after landing
+(function(){
+  const modal = document.getElementById('leadModal');
+  if(!modal) return;
+  const shown = sessionStorage.getItem('ppLeadShown');
+  function open(){ modal.classList.add('open'); }
+  function close(){ modal.classList.remove('open'); sessionStorage.setItem('ppLeadShown','1'); }
+  if(!shown){ setTimeout(open, 6000); }
+  modal.querySelector('.lead-close').addEventListener('click', close);
+  modal.querySelector('.lead-backdrop').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
+  modal.querySelector('.lead-cta').addEventListener('click', () => sessionStorage.setItem('ppLeadShown','1'));
+})();
+</script>
+
+<div class="lead-modal" id="leadModal">
+  <div class="lead-backdrop"></div>
+  <div class="lead-card">
+    <button class="lead-close" aria-label="Close">&times;</button>
+    <span class="lead-eyebrow">Free · 2 minutes ✰</span>
+    <h3>What's your <em>performance leak?</em></h3>
+    <p>Every athlete has a weak link quietly costing them speed, strength or durability. Take the free assessment, see where you rank on the athlete scale, and get takeaways you can action today.</p>
+    <a class="btn btn-coral lead-cta" href="https://go.acr.fit/widget/quiz/vYTkI7XVkh5PCKWyzMx7">Take the free assessment</a>
+    <button class="lead-dismiss lead-close">No thanks, maybe later</button>
+  </div>
+</div>
+
+</body>
+</html>
