@@ -7,11 +7,11 @@
 <meta name="description" content="Looking to train like a Primed athlete? Find your perfect fit. Primed Base, Primed Charge, Primed Peak and Primed for Hyrox, written by Em and delivered straight to your phone.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@700;800;900&family=Work+Sans:wght@400;500;600;700;800&family=Rock+Salt&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Rock+Salt&display=swap" rel="stylesheet">
 <style>
 :root{
   --ps-navy:#000097;--ps-coral:#FF4B33;--ps-blue:#0000F5;--ps-ink:#0A0A0A;--ps-grey:#F2F2F5;--ps-muted:#5b5b6e;
-  --ps-display:'Saira Condensed','Arial Narrow',sans-serif;--ps-body:'Work Sans',system-ui,sans-serif;
+  --ps-display:'Archivo','Arial Narrow',sans-serif;--ps-body:'Archivo',system-ui,sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -37,7 +37,7 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 .ps{font-family:var(--ps-body);color:var(--ps-ink);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
 .ps *{box-sizing:border-box;margin:0;padding:0}
 .ps img{max-width:100%;display:block}
-.ps h1,.ps h2,.ps h3{font-family:var(--ps-display);font-weight:900;text-transform:uppercase;line-height:.98}
+.ps h1,.ps h2,.ps h3{font-family:var(--ps-display);font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.98}
 .ps .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ps-coral);margin-bottom:14px}
 .ps .hand{font-family:'Rock Salt',cursive;font-weight:400;text-transform:none}
 .ps .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
@@ -55,6 +55,11 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 .ps-hero .ps-cta{display:inline-block;margin-top:30px;background:var(--ps-coral);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
 .ps-hero .ps-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,75,51,.45)}
 
+.ph-quiz{display:inline-flex;align-items:center;gap:10px;margin-bottom:22px;padding:7px 8px 7px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.06);color:#fff;text-decoration:none;font-size:14px;font-weight:600;transition:border-color .15s ease,background .15s ease}
+.ph-quiz b{background:var(--ps-coral);color:#fff;padding:6px 14px;border-radius:999px;font-weight:700;font-size:13px;white-space:nowrap}
+.ph-quiz:hover{border-color:var(--ps-coral);background:rgba(255,75,51,.12)}
+@media (max-width:480px){.ph-quiz{flex-wrap:wrap;border-radius:18px;padding:10px 12px 10px 16px}}
+
 /* collage */
 .ph-col{position:relative;width:100%;max-width:600px;margin-left:auto;aspect-ratio:1/1;container-type:inline-size}
 .ph-tile{position:absolute;width:43%;aspect-ratio:1/1;overflow:hidden;border:.7cqw solid #fff;box-shadow:0 3cqw 6cqw rgba(0,0,0,.55);transition:transform .3s ease}
@@ -69,9 +74,9 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 .ph-top{background:var(--ps-navy);color:#fff;padding:2cqw 3.2cqw 2.6cqw}
 .ph-status{display:flex;justify-content:space-between;font-size:1.9cqw;font-weight:600;margin-bottom:2.4cqw}
 .ph-status i{width:10cqw;height:2.4cqw;background:#000;border-radius:2cqw;display:block}
-.ph-brand{font-family:var(--ps-display);font-weight:900;font-size:2.2cqw;letter-spacing:.3cqw;color:var(--ps-coral)}
+.ph-brand{font-family:var(--ps-display);font-stretch:62%;font-weight:900;font-size:2.2cqw;letter-spacing:.3cqw;color:var(--ps-coral)}
 .ph-week{font-size:1.9cqw;color:#c9c9f0;margin-top:.4cqw}
-.ph-title{font-family:var(--ps-display);font-weight:900;text-transform:uppercase;font-size:4.2cqw;line-height:.95;margin-top:1.2cqw}
+.ph-title{font-family:var(--ps-display);font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:4.2cqw;line-height:.95;margin-top:1.2cqw}
 .ph-bar{height:.9cqw;background:rgba(255,255,255,.2);border-radius:1cqw;margin-top:2.2cqw;overflow:hidden}
 .ph-bar b{display:block;width:25%;height:100%;background:var(--ps-coral)}
 .ph-list{flex:1;min-height:0;overflow:hidden;padding:.8cqw 2.6cqw;display:flex;flex-direction:column;gap:.2cqw}
@@ -127,10 +132,10 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 .ps-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
 .ps-card .hand{font-size:14px;color:#555;margin-bottom:12px;line-height:1.5}
 .ps-price{margin-top:auto;margin-bottom:16px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.ps-price .amt{font-family:var(--ps-display);font-weight:900;font-size:44px;line-height:1;color:var(--ps-navy)}
+.ps-price .amt{font-family:var(--ps-display);font-stretch:62%;font-weight:900;font-size:44px;line-height:1;color:var(--ps-navy)}
 .ps-card.hyrox .ps-price .amt{color:var(--ps-ink)}
 .ps-price .note{font-size:13.5px;color:#666}
-.ps-release{font-family:var(--ps-display);font-weight:900;font-size:28px;text-transform:uppercase;line-height:1;color:var(--ps-ink)}
+.ps-release{font-family:var(--ps-display);font-stretch:62%;font-weight:900;font-size:28px;text-transform:uppercase;line-height:1;color:var(--ps-ink)}
 .ps-release small{display:block;font-family:var(--ps-body);font-size:12px;font-weight:700;letter-spacing:.12em;color:#9a9aab;margin-bottom:6px}
 .ps-founding{font-size:13.5px;background:var(--ps-grey);border-left:4px solid var(--ps-coral);padding:9px 12px;margin:-4px 0 16px}
 .ps-founding b{color:var(--ps-coral)}
@@ -174,6 +179,21 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 @media (max-width:1150px) and (min-width:901px){.nav-links{gap:20px}.nav-links a{font-size:14px;white-space:nowrap}}
 @media (max-width:900px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ps-ink);flex-direction:column;padding:24px;gap:20px}.nav-links.open{display:flex}.menu-btn{display:block}}
 </style>
+
+<style id="brand-refresh">
+html,body{overflow-x:clip}
+/* Brand refresh: halftone star, colour, photo grade */
+.pstar{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin:0 .12em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat}
+.marquee{background:var(--navy)}
+.marquee .pstar{color:var(--coral)}
+.cta-band{background:var(--navy);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;background:url('images/star-white.png') center/contain no-repeat;opacity:.07;pointer-events:none}
+.cta-band .wrap{position:relative;z-index:1}
+.article-cta{background:var(--navy)}
+.cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
+img[src$=".jpg"],img[src*="images/blog-"],.hero-video{filter:sepia(.25) hue-rotate(192deg) saturate(1.2) contrast(1.06)}
+.ph-overlay{background:linear-gradient(180deg,rgba(0,0,120,.55),rgba(10,10,10,.9))}
+</style>
 </head>
 <body>
 
@@ -202,6 +222,7 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
   <div class="ps-hero">
     <div class="wrap">
       <div class="ph-copy">
+        <a class="ph-quiz" href="https://go.acr.fit/widget/quiz/vYTkI7XVkh5PCKWyzMx7" target="_blank" rel="noopener">See where you're at <b>Take the Performance Leak Quiz &rarr;</b></a><br>
         <span class="eyebrow">Primed Programs</span>
         <h1>Looking to train like a <em>Primed</em> athlete?</h1>
         <p class="lede">Find your perfect fit. Every Primed program is written by Em, built on the same principles as her 1:1 coaching, and delivered straight to your phone, so you can train with purpose wherever you are.</p>

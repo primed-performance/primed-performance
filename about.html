@@ -7,7 +7,7 @@
 <meta name="description" content="Meet Em, the university-qualified exercise and sport scientist behind Primed Performance. Evidence-based online coaching for developing athletes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#0000F5;
@@ -21,13 +21,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:88px 0}
 h1,h2,h3{line-height:0.98;letter-spacing:.005em}
-h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900}
+h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900}
 .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
 .btn{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent}
 .btn:hover{transform:translateY(-2px)}
@@ -52,7 +52,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .hero{background:var(--grey);padding:96px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;margin-bottom:28px}
-.badge::before{content:"✰";color:var(--coral)}
+.badge::before{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;color:var(--coral)}
 .hero h1{font-size:clamp(52px,7vw,92px);font-weight:900;text-transform:uppercase}
 .hero h1 em{font-style:italic;color:var(--blue)}
 .hero p.lede{font-size:19px;margin:26px 0 34px;max-width:520px}
@@ -211,18 +211,18 @@ footer a:hover{color:var(--coral)}
 .lead-copy p{margin-bottom:20px}
 .m2-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
 .m2-grid img{width:100%;height:460px;object-fit:cover;border-radius:var(--radius)}
-.m2-grid .big{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:clamp(26px,3vw,40px);line-height:1.02;margin-bottom:20px}
+.m2-grid .big{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(26px,3vw,40px);line-height:1.02;margin-bottom:20px}
 .m2-grid .big em{font-style:italic;color:var(--coral)}
 .m2-grid p{font-size:16.5px;color:#444;margin-bottom:16px}
 .pa{background:var(--ink);color:#fff;border-radius:0;padding:56px;max-width:940px;margin:0 auto;position:relative;overflow:hidden}
-.pa::after{content:"✰";position:absolute;right:34px;top:6px;font-size:130px;color:rgba(255,75,51,.14)}
-.pa .word{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:54px;color:#fff;line-height:1}
+.pa::after{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;position:absolute;right:34px;top:6px;font-size:130px;color:rgba(255,75,51,.14)}
+.pa .word{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:54px;color:#fff;line-height:1}
 .pa .phon{color:#9a9ac9;font-size:16px;margin-bottom:22px;font-style:italic}
 .pa .def{font-size:19px;color:#e2e2ea;max-width:680px;position:relative;z-index:1}
 .pa .def strong{color:var(--coral)}
 .val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .val-card{background:var(--grey);border-radius:var(--radius);padding:32px 28px;border-top:3px solid var(--coral)}
-.val-card .vnum{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:34px;color:var(--coral);line-height:1;display:block;margin-bottom:8px}
+.val-card .vnum{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:34px;color:var(--coral);line-height:1;display:block;margin-bottom:8px}
 .val-card h3{font-size:20px;font-weight:800;text-transform:uppercase;margin-bottom:10px}
 .val-card p{font-size:15px;color:#555;margin-bottom:14px}
 .val-card .vtag{font-style:italic;font-weight:600;font-size:14.5px;color:var(--blue)}
@@ -279,6 +279,21 @@ footer a:hover{color:var(--coral)}
 <style id="nav-fit">
 @media (max-width:1150px) and (min-width:901px){.nav-links{gap:20px}.nav-links a{font-size:14px;white-space:nowrap}}
 @media (max-width:900px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}.nav-links.open{display:flex}.menu-btn{display:block}}
+</style>
+
+<style id="brand-refresh">
+html,body{overflow-x:clip}
+/* Brand refresh: halftone star, colour, photo grade */
+.pstar{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin:0 .12em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat}
+.marquee{background:var(--navy)}
+.marquee .pstar{color:var(--coral)}
+.cta-band{background:var(--navy);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;background:url('images/star-white.png') center/contain no-repeat;opacity:.07;pointer-events:none}
+.cta-band .wrap{position:relative;z-index:1}
+.article-cta{background:var(--navy)}
+.cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
+img[src$=".jpg"],img[src*="images/blog-"],.hero-video{filter:sepia(.25) hue-rotate(192deg) saturate(1.2) contrast(1.06)}
+.ph-overlay{background:linear-gradient(180deg,rgba(0,0,120,.55),rgba(10,10,10,.9))}
 </style>
 </head>
 <body>
@@ -347,7 +362,7 @@ footer a:hover{color:var(--coral)}
         <li><a href="blog.html">Blog</a></li>
         <li><a href="free-resources.html">Free Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start Here</a></li>
+        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></li>
       </ul>
     </nav>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -357,20 +372,20 @@ footer a:hover{color:var(--coral)}
 <div class="page-head">
   <img class="ph-bg" src="images/hero-about.jpg" alt="">
   <div class="ph-overlay"></div>
-  <span class="eyebrow">About Primed ✰</span>
+  <span class="eyebrow">About Primed <span class="pstar" aria-hidden="true"></span></span>
   <h1>Better humans. Better athletes. Better <em>leaders.</em></h1>
   <p>Our mission is to make high-quality, evidence-based coaching accessible to athletes everywhere.</p>
 </div>
 
 <div class="marquee" aria-hidden="true"><div class="marquee-track">
-  <span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span><span>Get Primed ✰</span><span>Train Smart ✰</span>
+  <span>Get Primed <span class="pstar" aria-hidden="true"></span></span><span>Train Smart <span class="pstar" aria-hidden="true"></span></span><span>Get Primed <span class="pstar" aria-hidden="true"></span></span><span>Train Smart <span class="pstar" aria-hidden="true"></span></span><span>Get Primed <span class="pstar" aria-hidden="true"></span></span><span>Train Smart <span class="pstar" aria-hidden="true"></span></span><span>Get Primed <span class="pstar" aria-hidden="true"></span></span><span>Train Smart <span class="pstar" aria-hidden="true"></span></span>
 </div></div>
 
 <section>
   <div class="wrap m2-grid">
     <img src="images/about-born.jpg" alt="Coach Em working with an athlete">
     <div>
-      <span class="eyebrow">How Primed was born ✰</span>
+      <span class="eyebrow">How Primed was born <span class="pstar" aria-hidden="true"></span></span>
       <p class="big">Too many athletes are held back by <em>generic programs</em></p>
       <p>Primed was born from a simple frustration: quality coaching shouldn't depend on your postcode. Built as an online performance business, it removes geographical barriers so any athlete can access structured, scientific strength and conditioning, wherever they train or compete.</p>
       <p>The goal is bigger than results. It's building resilient, capable athletes prepared for the demands of high-level sport, and helping them reach their prime and stay there.</p>
@@ -392,7 +407,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap meet-grid">
     <img src="images/about-em.jpg" alt="Em, founder and head coach of Primed Performance">
     <div>
-      <span class="eyebrow">Our founder ✰</span>
+      <span class="eyebrow">Our founder <span class="pstar" aria-hidden="true"></span></span>
       <h2>Meet <em>Em</em></h2>
       <p>Em is the founder and head coach of Primed Performance. Since completing her Bachelor's degree in Exercise and Sport Science, her mission has been clear: to help athletes reach their prime and stay there, physically, mentally and holistically.</p>
       <div class="quote-block">"Great coaching goes beyond programs and numbers. It's about building capable humans, resilient athletes and confident performers who understand why they train the way they do."</div>
@@ -420,7 +435,7 @@ footer a:hover{color:var(--coral)}
 <section>
   <div class="wrap">
     <div style="text-align:center;max-width:680px;margin:0 auto 8px">
-      <span class="eyebrow">Our values ✰</span>
+      <span class="eyebrow">Our values <span class="pstar" aria-hidden="true"></span></span>
       <h2 style="font-size:clamp(28px,3.6vw,44px);font-weight:900;text-transform:uppercase">What it takes to <span style="font-style:italic;color:var(--blue)">#GetPrimed</span></h2>
       <p style="color:#555;margin-top:14px">Our values define how we coach, how we train and how we show up. Every session, every athlete, every standard.</p>
     </div>
@@ -439,7 +454,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap split">
     <img src="images/education-community.jpg" alt="Em educating the athlete community">
     <div>
-      <span class="eyebrow">Education &amp; equality ✰</span>
+      <span class="eyebrow">Education &amp; equality <span class="pstar" aria-hidden="true"></span></span>
       <h2>Knowledge should never be a <em>barrier</em></h2>
       <p>Education and equality sit high on our priority list. Not every athlete is given equal access to high-quality coaching due to location, resources or funding, and we believe knowledge should never be a barrier to performance.</p>
       <p>While the most comprehensive results come from working 1:1 within our coaching framework, we're deeply committed to giving back and supporting the wider athletic community. That means free educational resources, community initiatives and accessible learning for athletes, parents and coaches.</p>
@@ -453,7 +468,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap">
     <h2>Ready to get primed?</h2>
     <p>Tell me about you, your sport and your goals. I'll personally be in touch within 24 to 48 hours.</p>
-    <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here</a>
+    <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
   </div>
 </section>
 
@@ -486,12 +501,12 @@ footer a:hover{color:var(--coral)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Primed Performance · All rights reserved</span>
-      <span>#GETPRIMED ✰</span>
+      <span>#GETPRIMED <span class="pstar" aria-hidden="true"></span></span>
     </div>
   </div>
 </footer>
 <div class="float-cta" id="floatCta">
-  <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here ✰</a>
+  <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
 </div>
 <script>
 const io = new IntersectionObserver(entries => {

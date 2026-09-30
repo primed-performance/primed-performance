@@ -7,7 +7,7 @@
 <meta name="description" content="Athletes who understand why they're doing what they're doing are more consistent, more engaged and more coachable, and they get better outcomes.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#0000F5;
@@ -21,13 +21,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:88px 0}
 h1,h2,h3{line-height:0.98;letter-spacing:.005em}
-h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900}
+h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900}
 .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
 .btn{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent}
 .btn:hover{transform:translateY(-2px)}
@@ -52,7 +52,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .hero{background:var(--grey);padding:96px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;margin-bottom:28px}
-.badge::before{content:"✰";color:var(--coral)}
+.badge::before{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;color:var(--coral)}
 .hero h1{font-size:clamp(52px,7vw,92px);font-weight:900;text-transform:uppercase}
 .hero h1 em{font-style:italic;color:var(--blue)}
 .hero p.lede{font-size:19px;margin:26px 0 34px;max-width:520px}
@@ -266,7 +266,7 @@ footer a:hover{color:var(--coral)}
 .article-body .lead{font-size:20px;font-weight:600;color:var(--ink)}
 .article-body .callout{background:var(--grey);border-left:4px solid var(--blue);border-radius:0;padding:22px 26px;margin:28px 0;font-size:17px}
 .article-cta{background:var(--coral);color:#fff;border-radius:0;padding:40px;text-align:center;margin-top:44px}
-.article-cta h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:28px;color:#fff;margin-bottom:12px}
+.article-cta h3{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:28px;color:#fff;margin-bottom:12px}
 .article-cta p{color:#fff;font-size:16px;margin-bottom:22px;opacity:.95}
 .article-nav{max-width:760px;margin:0 auto 60px;padding:0 24px;display:flex;justify-content:space-between;gap:16px;font-weight:700}
 .article-nav a{color:var(--blue);text-decoration:none;font-size:15px}
@@ -280,6 +280,21 @@ footer a:hover{color:var(--coral)}
 <style id="nav-fit">
 @media (max-width:1150px) and (min-width:901px){.nav-links{gap:20px}.nav-links a{font-size:14px;white-space:nowrap}}
 @media (max-width:900px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}.nav-links.open{display:flex}.menu-btn{display:block}}
+</style>
+
+<style id="brand-refresh">
+html,body{overflow-x:clip}
+/* Brand refresh: halftone star, colour, photo grade */
+.pstar{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin:0 .12em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat}
+.marquee{background:var(--navy)}
+.marquee .pstar{color:var(--coral)}
+.cta-band{background:var(--navy);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;background:url('images/star-white.png') center/contain no-repeat;opacity:.07;pointer-events:none}
+.cta-band .wrap{position:relative;z-index:1}
+.article-cta{background:var(--navy)}
+.cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
+img[src$=".jpg"],img[src*="images/blog-"],.hero-video{filter:sepia(.25) hue-rotate(192deg) saturate(1.2) contrast(1.06)}
+.ph-overlay{background:linear-gradient(180deg,rgba(0,0,120,.55),rgba(10,10,10,.9))}
 </style>
 </head>
 <body>
@@ -347,7 +362,7 @@ footer a:hover{color:var(--coral)}
         <li><a href="blog.html">Blog</a></li>
         <li><a href="free-resources.html">Free Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start Here</a></li>
+        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></li>
       </ul>
     </nav>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -416,11 +431,11 @@ footer a:hover{color:var(--coral)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Primed Performance · All rights reserved</span>
-      <span>#GETPRIMED ✰</span>
+      <span>#GETPRIMED <span class="pstar" aria-hidden="true"></span></span>
     </div>
   </div>
 </footer>
-<div class="float-cta" id="floatCta"><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here ✰</a></div>
+<div class="float-cta" id="floatCta"><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></div>
 <script>
 const io = new IntersectionObserver(entries => {
   entries.forEach(e => {

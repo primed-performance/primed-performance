@@ -7,7 +7,7 @@
 <meta name="description" content="PRIMED BASE is a 12-week off-season strength and speed program for club and developing athletes. Built in the off-season. Proven in season. Releases 1 October 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&family=Rock+Salt&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Rock+Salt&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#000097;
@@ -21,13 +21,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:84px 0}
 h1,h2,h3{line-height:0.98;letter-spacing:.005em}
-h1,h2,.step h3,.half-card h3,.price-card h3{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900;text-transform:uppercase}
+h1,h2,.step h3,.half-card h3,.price-card h3{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase}
 .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:16px}
 .hand{font-family:'Rock Salt',cursive;font-weight:400}
 .btn{display:inline-block;padding:16px 32px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent;cursor:pointer}
@@ -39,7 +39,7 @@ h1,h2,.step h3,.half-card h3,.price-card h3{font-family:'Saira Condensed','Work 
 .btn-outline-white:hover{background:#fff;color:var(--navy)}
 .btn-coral{background:var(--coral);color:#fff}
 .btn-coral:hover{box-shadow:0 10px 24px rgba(255,75,51,.45)}
-.cd-title{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:15px;color:#fff;opacity:.85;margin:0 auto 10px;position:relative;z-index:1}
+.cd-title{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;letter-spacing:.12em;font-size:15px;color:#fff;opacity:.85;margin:0 auto 10px;position:relative;z-index:1}
 .price-card .btn + .btn{margin-top:12px}
 .price-card .btn-outline-white{font-size:15px}
 .price-note a{color:var(--navy)}
@@ -58,7 +58,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .base-hero{background:var(--navy);color:#fff;text-align:center;padding:52px 0 60px;position:relative;overflow:hidden}
 .base-hero .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .base-hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,90,.82),rgba(0,0,110,.9));z-index:0}
-.base-hero::before{content:"★";position:absolute;font-size:520px;color:rgba(255,255,255,.05);top:-80px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;z-index:0}
+.base-hero::before{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;position:absolute;font-size:520px;color:rgba(255,255,255,.05);top:-80px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none;z-index:0}
 .base-hero .wrap{position:relative;z-index:1}
 .base-hero .logo{max-width:440px;margin:0 auto 18px;position:relative;z-index:1}
 .base-hero .tag{font-family:'Rock Salt',cursive;font-size:17px;color:#fff;opacity:.9;margin-bottom:18px}
@@ -69,11 +69,11 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 /* COUNTDOWN */
 .countdown{display:flex;gap:14px;justify-content:center;margin:0 auto 26px;position:relative;z-index:1}
 .cd-box{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:0;padding:14px 18px;min-width:78px}
-.cd-box .num{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:40px;line-height:1;color:#fff}
+.cd-box .num{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:40px;line-height:1;color:#fff}
 .cd-box .lbl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#b7b7e0;margin-top:4px}
 
 /* STRIP */
-.strip{background:var(--ink);color:#fff;text-align:center;padding:18px 0;font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:20px;letter-spacing:.08em}
+.strip{background:var(--ink);color:#fff;text-align:center;padding:18px 0;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:20px;letter-spacing:.08em}
 .strip span{color:var(--coral);margin:0 10px}
 
 /* PROBLEM */
@@ -101,19 +101,19 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .get h2 em{font-style:italic;color:var(--navy)}
 .get-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .get-card{background:var(--grey);border-radius:var(--radius);padding:30px 26px;text-align:center}
-.get-card .ic{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:40px;color:var(--navy);line-height:1;margin-bottom:12px}
-.get-card h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;margin-bottom:8px}
+.get-card .ic{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:40px;color:var(--navy);line-height:1;margin-bottom:12px}
+.get-card h3{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:19px;margin-bottom:8px}
 .get-card p{font-size:15px;color:#555}
 
 /* APP SHOWCASE */
 .app{background:var(--ink);color:#fff}
-.app h2{font-size:clamp(30px,4vw,50px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:14px}
+.app h2{font-size:clamp(30px,4vw,50px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;color:#fff;margin-bottom:14px}
 .app-sub{color:#b9b9c8;font-size:17px}
 .app-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;align-items:end;max-width:900px;margin:0 auto}
 .app-phone{text-align:center}
 .app-phone img{width:100%;border-radius:0;box-shadow:0 20px 50px rgba(0,0,0,.5)}
 .app-phone.tall{transform:translateY(-24px)}
-.app-label{display:block;margin-top:16px;font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:15px;letter-spacing:.06em;color:var(--coral)}
+.app-label{display:block;margin-top:16px;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:15px;letter-spacing:.06em;color:var(--coral)}
 
 /* JOURNEY */
 .journey{background:var(--navy);color:#fff}
@@ -122,7 +122,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .phase{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:30px 26px}
 .phase .wk{font-family:'Rock Salt',cursive;font-size:14px;color:var(--coral);margin-bottom:10px}
-.phase h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:22px;margin-bottom:10px;color:#fff}
+.phase h3{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:22px;margin-bottom:10px;color:#fff}
 .phase p{font-size:15px;color:#d4d4ee}
 .journey .markers{text-align:center;margin-top:36px;color:#b7b7e0;font-size:15px}
 
@@ -132,7 +132,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .whofor-card{border-radius:var(--radius);padding:30px 28px}
 .whofor-card.yes{background:#eef7ee;border:1.5px solid #b9dfb9}
 .whofor-card.no{background:#fdeeec;border:1.5px solid #f5c6bf}
-.whofor-card h3{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:20px;margin-bottom:14px}
+.whofor-card h3{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:20px;margin-bottom:14px}
 .whofor-card ul{list-style:none}
 .whofor-card li{padding-left:26px;position:relative;margin-bottom:10px;font-size:15.5px}
 .whofor-card.yes li::before{content:"✓";position:absolute;left:0;color:#2e9e2e;font-weight:800}
@@ -144,17 +144,17 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;text-align:left}
 .proof-card{background:#fff;border-radius:var(--radius);padding:34px 30px;border-top:5px solid var(--navy);display:flex;flex-direction:column;gap:18px}
 .proof-card p{font-size:16.5px;font-style:italic;line-height:1.5}
-.proof .who{font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-size:14.5px}
+.proof .who{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-size:14.5px}
 
 /* PRICING */
 .pricing{text-align:center}
 .pricing h2{font-size:clamp(30px,4vw,50px);margin-bottom:12px}
 .pricing .sub{max-width:560px;margin:0 auto 40px;color:#555}
 .price-card{background:var(--navy);color:#fff;border-radius:0;max-width:460px;margin:0 auto;padding:48px 40px;position:relative;overflow:hidden}
-.price-card::after{content:"★";position:absolute;right:20px;top:-20px;font-size:150px;color:rgba(255,255,255,.06)}
+.price-card::after{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;position:absolute;right:20px;top:-20px;font-size:150px;color:rgba(255,255,255,.06)}
 .price-card .flag{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:999px;margin-bottom:20px}
 .price-card h3{font-size:30px;color:#fff;margin-bottom:6px}
-.price-card .amt{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:72px;line-height:1;color:#fff}
+.price-card .amt{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:72px;line-height:1;color:#fff}
 .price-card .amt small{font-size:24px;vertical-align:super}
 .price-card .then{color:#b7b7e0;font-size:15px;margin:10px 0 28px}
 .price-card .then s{opacity:.8}
@@ -164,14 +164,14 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 /* SIGNUP */
 .signup{background:var(--ink)}
 .signup-box{background:var(--navy);border-radius:0;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;overflow:hidden}
-.signup-box::after{content:"★";position:absolute;left:-30px;bottom:-60px;font-size:220px;color:rgba(255,255,255,.05);pointer-events:none}
+.signup-box::after{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;position:absolute;left:-30px;bottom:-60px;font-size:220px;color:rgba(255,255,255,.05);pointer-events:none}
 .signup-copy{position:relative;z-index:1}
-.signup-copy h2{font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:16px}
+.signup-copy h2{font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;color:#fff;margin-bottom:16px}
 .signup-copy h2 .hand{color:#fff;text-transform:none;font-size:0.8em}
 .signup-copy p{color:#dcdcf0;font-size:16.5px;margin-bottom:22px}
 .signup-perks{list-style:none}
 .signup-perks li{padding-left:28px;position:relative;margin-bottom:12px;color:#fff;font-size:15.5px}
-.signup-perks li::before{content:"★";position:absolute;left:0;color:#fff}
+.signup-perks li::before{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;position:absolute;left:0;color:#fff}
 .signup-form{position:relative;z-index:1}
 .form-placeholder{background:rgba(255,255,255,.08);border:2px dashed rgba(255,255,255,.35);border-radius:0;padding:44px 30px;text-align:center;display:flex;flex-direction:column;gap:10px;color:#fff}
 .form-placeholder strong{font-size:17px}
@@ -179,7 +179,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 
 /* FAQ */
 .faq{background:var(--grey)}
-.faq h2{font-size:clamp(30px,4vw,48px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;margin-bottom:40px}
+.faq h2{font-size:clamp(30px,4vw,48px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;margin-bottom:40px}
 .faq details{background:#fff;border-radius:0;margin-bottom:14px;padding:22px 26px;border:1.5px solid transparent}
 .faq details[open]{border-color:var(--navy)}
 .faq summary{font-weight:700;font-size:17px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
@@ -189,7 +189,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 
 /* FINAL CTA */
 .final{background:var(--navy);color:#fff;text-align:center}
-.final h2{font-size:clamp(34px,4.6vw,58px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;color:#fff;margin-bottom:16px}
+.final h2{font-size:clamp(34px,4.6vw,58px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;color:#fff;margin-bottom:16px}
 .final p{max-width:540px;margin:0 auto 30px;font-size:18px;color:#dcdcf0}
 
 /* FOOTER (matches main site) */
@@ -222,6 +222,26 @@ footer a:hover{color:var(--coral)}
   .cd-box .num{font-size:32px}
 }
 </style>
+
+<style id="nav-fit">
+@media (max-width:1150px) and (min-width:901px){.nav-links{gap:20px}.nav-links a{font-size:14px;white-space:nowrap}}
+@media (max-width:900px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}.nav-links.open{display:flex}.menu-btn{display:block}}
+</style>
+
+<style id="brand-refresh">
+html,body{overflow-x:clip}
+/* Brand refresh: halftone star, colour, photo grade */
+.pstar{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin:0 .12em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat}
+.marquee{background:var(--navy)}
+.marquee .pstar{color:var(--coral)}
+.cta-band{background:var(--navy);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;background:url('images/star-white.png') center/contain no-repeat;opacity:.07;pointer-events:none}
+.cta-band .wrap{position:relative;z-index:1}
+.article-cta{background:var(--navy)}
+.cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
+img[src$=".jpg"],img[src*="images/blog-"],.hero-video{filter:sepia(.25) hue-rotate(192deg) saturate(1.2) contrast(1.06)}
+.ph-overlay{background:linear-gradient(180deg,rgba(0,0,120,.55),rgba(10,10,10,.9))}
+</style>
 </head>
 <body>
 <header>
@@ -232,6 +252,7 @@ footer a:hover{color:var(--coral)}
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Coaching</a></li>
+        <li><a href="programs.html">Programs</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="free-resources.html">Free Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -265,7 +286,7 @@ footer a:hover{color:var(--coral)}
   </div>
 </div>
 
-<div class="strip founding-only">Out 1 October 2026 <span>★</span> Founding price to 14 October <span>★</span> $69 with your code, then $99</div>
+<div class="strip founding-only">Out 1 October 2026 <span><span class="pstar" aria-hidden="true"></span></span> Founding price to 14 October <span><span class="pstar" aria-hidden="true"></span></span> $69 with your code, then $99</div>
 
 <section class="problem">
   <div class="wrap">
@@ -314,7 +335,7 @@ footer a:hover{color:var(--coral)}
     <div class="get-grid">
       <div class="get-card"><div class="ic">12</div><h3>Weeks, fully written</h3><p>A complete 12-week plan, every session written end to end. No guesswork.</p></div>
       <div class="get-card"><div class="ic">5</div><h3>Sessions a week</h3><p>3 gym, 1 engine, 1 speed. Structured to build without burning you out.</p></div>
-      <div class="get-card"><div class="ic">★</div><h3>On TrainHeroic</h3><p>Delivered through the gold-standard app, with video demos, cues and tracking.</p></div>
+      <div class="get-card"><div class="ic"><span class="pstar" aria-hidden="true"></span></div><h3>On TrainHeroic</h3><p>Delivered through the gold-standard app, with video demos, cues and tracking.</p></div>
       <div class="get-card"><div class="ic">RAMP</div><h3>Full warm-ups</h3><p>Every session opens with a RAMP warm up and closes with recovery and flexibility.</p></div>
       <div class="get-card"><div class="ic">▲</div><h3>Real progression</h3><p>Testing at weeks 1 and 12, planned deloads, and a week 4 landing check that gates your plyos.</p></div>
       <div class="get-card"><div class="ic">∞</div><h3>Yours to keep</h3><p>A one-off purchase. Run it this off-season, then again next year.</p></div>
@@ -355,7 +376,7 @@ footer a:hover{color:var(--coral)}
       <div class="phase"><div class="wk">Weeks 5 to 8</div><h3>Add the load</h3><p>Progress strength and intensity as your base solidifies, with a deload to keep you fresh.</p></div>
       <div class="phase"><div class="wk">Weeks 9 to 12</div><h3>Convert to speed</h3><p>Turn strength into speed and power. Retest in week 12 to see exactly how far you've come.</p></div>
     </div>
-    <p class="markers">Deloads at weeks 4, 8 and 12 &nbsp;★&nbsp; Testing at weeks 1 and 12 &nbsp;★&nbsp; Week 4 landing check gates your plyometric progression</p>
+    <p class="markers">Deloads at weeks 4, 8 and 12 &nbsp;<span class="pstar" aria-hidden="true"></span>&nbsp; Testing at weeks 1 and 12 &nbsp;<span class="pstar" aria-hidden="true"></span>&nbsp; Week 4 landing check gates your plyometric progression</p>
   </div>
 </section>
 
@@ -363,7 +384,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap">
     <div style="text-align:center;max-width:660px;margin:0 auto">
       <span class="eyebrow">Is it for you?</span>
-      <h2 style="font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900">Built for athletes chasing the next level</h2>
+      <h2 style="font-size:clamp(28px,3.6vw,42px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900">Built for athletes chasing the next level</h2>
     </div>
     <div class="whofor-grid">
       <div class="whofor-card yes">
@@ -393,7 +414,7 @@ footer a:hover{color:var(--coral)}
 <section class="proof">
   <div class="wrap">
     <span class="eyebrow">The proof</span>
-    <h2 style="font-size:clamp(26px,3.4vw,40px);text-transform:uppercase;font-family:'Saira Condensed';font-weight:900;margin-bottom:44px">Real athletes. <span style="font-style:italic;color:var(--navy)">Real</span> gains.</h2>
+    <h2 style="font-size:clamp(26px,3.4vw,40px);text-transform:uppercase;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;margin-bottom:44px">Real athletes. <span style="font-style:italic;color:var(--navy)">Real</span> gains.</h2>
     <div class="proof-grid">
       <div class="proof-card">
         <p>"Emily's coaching has helped my game so much. I'm stronger on the court and faster in my lateral and vertical movements. She really knows her stuff."</p>
@@ -472,6 +493,7 @@ footer a:hover{color:var(--coral)}
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Online Coaching</a></li>
+          <li><a href="programs.html">Programs</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="free-resources.html">Free Resources</a></li>
         </ul>
@@ -488,7 +510,7 @@ footer a:hover{color:var(--coral)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Primed Performance · All rights reserved</span>
-      <span>#GETPRIMED ✰</span>
+      <span>#GETPRIMED <span class="pstar" aria-hidden="true"></span></span>
     </div>
   </div>
 </footer>

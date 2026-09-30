@@ -7,7 +7,7 @@
 <meta name="description" content="Individualised, evidence-based online strength and conditioning coaching for athletes. Two coached membership options tailored to your goals.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:ital,wght@0,700;0,900;1,900&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
 <style>
 :root{
   --blue:#0000F5;
@@ -21,13 +21,13 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Work Sans',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
+body{font-family:'Archivo',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;font-size:17px}
 img{max-width:100%;display:block}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
 section{padding:88px 0}
 h1,h2,h3{line-height:0.98;letter-spacing:.005em}
-h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Saira Condensed','Work Sans',sans-serif;font-weight:900}
+h1,h2,.step h3,.free-card h3,.cta-band h2{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900}
 .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
 .btn{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease;border:2px solid transparent}
 .btn:hover{transform:translateY(-2px)}
@@ -52,7 +52,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .hero{background:var(--grey);padding:96px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--white);border:1.5px solid var(--ink);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:600;margin-bottom:28px}
-.badge::before{content:"✰";color:var(--coral)}
+.badge::before{content:"";display:inline-block;width:1em;height:1em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat;color:var(--coral)}
 .hero h1{font-size:clamp(52px,7vw,92px);font-weight:900;text-transform:uppercase}
 .hero h1 em{font-style:italic;color:var(--blue)}
 .hero p.lede{font-size:19px;margin:26px 0 34px;max-width:520px}
@@ -75,7 +75,7 @@ header{background:var(--ink);position:sticky;top:0;z-index:50}
 .coach-stack img{position:absolute;box-shadow:0 24px 60px rgba(10,10,10,.28);border:6px solid #fff}
 .coach-stack .cs-back{top:0;right:0;width:62%;z-index:1}
 .coach-stack .cs-front{bottom:0;left:0;width:58%;z-index:2}
-.coach-stack .cs-tag{position:absolute;bottom:12px;right:6px;z-index:3;background:var(--navy);color:#fff;font-family:'Saira Condensed',sans-serif;font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.05em;padding:10px 18px}
+.coach-stack .cs-tag{position:absolute;bottom:12px;right:6px;z-index:3;background:var(--navy);color:#fff;font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:14px;letter-spacing:.05em;padding:10px 18px}
 .meet h2{font-size:clamp(32px,4vw,52px);font-weight:900;text-transform:uppercase;margin-bottom:22px}
 .meet h2 em{font-style:italic;color:var(--coral)}
 .quote-block{border-left:5px solid var(--blue);padding:6px 0 6px 22px;font-size:20px;font-style:italic;font-weight:600;margin:26px 0}
@@ -229,7 +229,7 @@ footer a:hover{color:var(--coral)}
 .svc-card li.hl{font-weight:700;color:var(--ink)}
 .svc-card li.hl::before{border-color:var(--blue)}
 .svc-card .tier-note{font-size:14.5px;color:#777;margin:-2px 0 20px;line-height:1.5}
-.svc-card .price .amt{font-family:'Saira Condensed',sans-serif;font-weight:900;font-size:34px;color:var(--ink)}
+.svc-card .price .amt{font-family:'Archivo',sans-serif;font-stretch:62%;font-weight:900;font-size:34px;color:var(--ink)}
 .svc-card .incl{font-weight:800;font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--blue);margin-bottom:14px}
 .learn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .learn-card{background:var(--white);border-radius:var(--radius);padding:30px 26px}
@@ -276,6 +276,21 @@ footer a:hover{color:var(--coral)}
 <style id="nav-fit">
 @media (max-width:1150px) and (min-width:901px){.nav-links{gap:20px}.nav-links a{font-size:14px;white-space:nowrap}}
 @media (max-width:900px){.nav-links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--ink);flex-direction:column;padding:24px;gap:20px}.nav-links.open{display:flex}.menu-btn{display:block}}
+</style>
+
+<style id="brand-refresh">
+html,body{overflow-x:clip}
+/* Brand refresh: halftone star, colour, photo grade */
+.pstar{display:inline-block;width:.85em;height:.85em;vertical-align:-.08em;margin:0 .12em;background-color:currentColor;-webkit-mask:url('images/star-white.png') center/contain no-repeat;mask:url('images/star-white.png') center/contain no-repeat}
+.marquee{background:var(--navy)}
+.marquee .pstar{color:var(--coral)}
+.cta-band{background:var(--navy);position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:-90px;top:-70px;width:380px;height:380px;background:url('images/star-white.png') center/contain no-repeat;opacity:.07;pointer-events:none}
+.cta-band .wrap{position:relative;z-index:1}
+.article-cta{background:var(--navy)}
+.cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
+img[src$=".jpg"],img[src*="images/blog-"],.hero-video{filter:sepia(.25) hue-rotate(192deg) saturate(1.2) contrast(1.06)}
+.ph-overlay{background:linear-gradient(180deg,rgba(0,0,120,.55),rgba(10,10,10,.9))}
 </style>
 </head>
 <body>
@@ -344,7 +359,7 @@ footer a:hover{color:var(--coral)}
         <li><a href="blog.html">Blog</a></li>
         <li><a href="free-resources.html">Free Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start Here</a></li>
+        <li><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></li>
       </ul>
     </nav>
     <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
@@ -364,14 +379,14 @@ footer a:hover{color:var(--coral)}
     <div class="coach-stack">
       <img class="cs-back" src="images/coaching-app.png" alt="Training program in the TrainHeroic app">
       <img class="cs-front" src="images/coaching-video.png" alt="Em coaching an athlete online with video feedback">
-      <span class="cs-tag">Online, wherever you are ✰</span>
+      <span class="cs-tag">Online, wherever you are <span class="pstar" aria-hidden="true"></span></span>
     </div>
     <div>
       <span class="eyebrow">Working together 1:1</span>
       <h2>More than a program. A <em>training system</em> built for you</h2>
       <p>Our 1:1 online performance coaching is for athletes who want more than a program. They want guidance, accountability and a system built specifically for them and their environment.</p>
       <p>This is fully individualised coaching grounded in evidence-based strength &amp; conditioning, tailored to your sport, training history, lifestyle and goals. Every decision is made with intent, so your training supports performance, resilience and long-term development, not just short-term results.</p>
-      <p><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here</a></p>
+      <p><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></p>
     </div>
   </div>
 </section>
@@ -379,7 +394,7 @@ footer a:hover{color:var(--coral)}
 <section style="background:var(--grey)">
   <div class="wrap">
     <span class="eyebrow">What you'll learn working together</span>
-    <h2 style="font-size:clamp(30px,4vw,48px);font-weight:900;text-transform:uppercase;margin-bottom:44px;max-width:720px">The skills that keep working long after coaching ✰</h2>
+    <h2 style="font-size:clamp(30px,4vw,48px);font-weight:900;text-transform:uppercase;margin-bottom:44px;max-width:720px">The skills that keep working long after coaching <span class="pstar" aria-hidden="true"></span></h2>
     <div class="learn-grid">
       <div class="learn-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-progress"/></svg><h3>Manage your training load</h3><p>Balance training stress across sport, strength and life using proven load management, so you adapt faster while lowering injury and burnout risk.</p></div>
       <div class="learn-card"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-clipboard"/></svg><h3>Get more from every session</h3><p>Structure your training week and each session with clear intent, prioritising what delivers the biggest return and cutting wasted volume.</p></div>
@@ -398,7 +413,7 @@ footer a:hover{color:var(--coral)}
       <span class="eyebrow">Choose your membership</span>
       <h2 style="font-size:clamp(30px,4vw,48px);font-weight:900;text-transform:uppercase">Two ways to train with <span style="font-style:italic;color:var(--blue)">Primed</span></h2>
     </div>
-    <p class="avail-banner">✰ Limited roster · 2 athlete spots open now</p>
+    <p class="avail-banner"><span class="pstar" aria-hidden="true"></span> Limited roster · 2 athlete spots open now</p>
     <div class="svc-grid two">
       <div class="svc-card">
         <svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-programs"/></svg>
@@ -469,7 +484,7 @@ footer a:hover{color:var(--coral)}
   <div class="wrap">
     <h2>Ready to get primed?</h2>
     <p>Tell me about you, your sport and your goals, and let's see if we're the right fit. Only 2 athlete spots open right now.</p>
-    <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here</a>
+    <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
   </div>
 </section>
 
@@ -502,12 +517,12 @@ footer a:hover{color:var(--coral)}
     </div>
     <div class="foot-bottom">
       <span>© 2026 Primed Performance · All rights reserved</span>
-      <span>#GETPRIMED ✰</span>
+      <span>#GETPRIMED <span class="pstar" aria-hidden="true"></span></span>
     </div>
   </div>
 </footer>
 <div class="float-cta" id="floatCta">
-  <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Start here ✰</a>
+  <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
 </div>
 <script>
 const io = new IntersectionObserver(entries => {
