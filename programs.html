@@ -42,18 +42,54 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
 .ps .hand{font-family:'Rock Salt',cursive;font-weight:400;text-transform:none}
 .ps .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 
-/* hero */
-.ps-hero{background:var(--ps-ink);color:#fff;text-align:center;padding:64px 0 56px;position:relative;overflow:hidden}
-.ps-hero::before{content:"\2605";position:absolute;font-size:480px;color:rgba(255,255,255,.04);top:-100px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none}
-.ps-hero .wrap{position:relative}
-.ps-word{display:inline-block;font-family:var(--ps-display);font-weight:900;font-size:22px;letter-spacing:2px;text-transform:uppercase;color:#fff;text-decoration:none;margin-bottom:28px}
-.ps-word span{color:var(--ps-coral)}
-.ps-hero h1{font-size:clamp(40px,6vw,72px);margin:0 auto 14px;max-width:880px}
-.ps-hero .lede{font-size:18px;max-width:620px;margin:0 auto;color:#c9c9d4}
-.ps-chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:30px}
+/* hero banner */
+.ps-hero{background:var(--ps-ink);color:#fff;padding:72px 0 84px;position:relative;overflow:hidden}
+.ps-hero::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 80% at 85% 40%,rgba(0,0,151,.75),transparent 70%),radial-gradient(40% 50% at 10% 110%,rgba(255,75,51,.18),transparent 70%);pointer-events:none}
+.ps-hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-62deg,transparent 0 46px,rgba(255,255,255,.035) 46px 48px);pointer-events:none}
+.ps-hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center}
+.ps-hero h1{font-size:clamp(42px,5.6vw,76px);margin:0 0 16px}
+.ps-hero h1 em{font-style:normal;color:var(--ps-coral)}
+.ps-hero .lede{font-size:18px;max-width:520px;color:#c9c9d4}
+.ps-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .ps-chips span{border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;color:#fff}
-.ps-hero .ps-cta{display:inline-block;margin-top:30px;background:var(--ps-coral);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;transition:transform .15s ease}
-.ps-hero .ps-cta:hover{transform:translateY(-2px)}
+.ps-hero .ps-cta{display:inline-block;margin-top:30px;background:var(--ps-coral);color:#fff;text-decoration:none;font-weight:700;padding:15px 30px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease}
+.ps-hero .ps-cta:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(255,75,51,.45)}
+
+/* collage */
+.ph-col{position:relative;width:100%;max-width:600px;margin-left:auto;aspect-ratio:1/1;container-type:inline-size}
+.ph-tile{position:absolute;width:43%;aspect-ratio:1/1;overflow:hidden;border:.7cqw solid #fff;box-shadow:0 3cqw 6cqw rgba(0,0,0,.55);transition:transform .3s ease}
+.ph-tile img{width:100%;height:100%;object-fit:cover}
+.ph-tile:hover{transform:rotate(0) scale(1.04)!important;z-index:6}
+.ph-t1{top:2%;left:4%;transform:rotate(-6deg);z-index:2}
+.ph-t2{top:0;right:2%;transform:rotate(5deg);z-index:1}
+.ph-t3{bottom:4%;right:0;transform:rotate(-4deg);z-index:3}
+.ph-t4{bottom:0;left:1%;transform:rotate(4deg);z-index:2}
+.ph-phone{position:absolute;left:50%;top:50%;width:40%;aspect-ratio:9/18.5;transform:translate(-50%,-50%) rotate(-3deg);background:#111;border-radius:6cqw;padding:1.3cqw;box-shadow:0 5cqw 10cqw rgba(0,0,0,.7),0 0 0 .35cqw #2a2a33;z-index:5}
+.ph-scr{width:100%;height:100%;background:#fff;border-radius:4.9cqw;overflow:hidden;display:flex;flex-direction:column;font-family:var(--ps-body);color:var(--ps-ink)}
+.ph-top{background:var(--ps-navy);color:#fff;padding:2cqw 3.2cqw 2.6cqw}
+.ph-status{display:flex;justify-content:space-between;font-size:1.9cqw;font-weight:600;margin-bottom:2.4cqw}
+.ph-status i{width:10cqw;height:2.4cqw;background:#000;border-radius:2cqw;display:block}
+.ph-brand{font-family:var(--ps-display);font-weight:900;font-size:2.2cqw;letter-spacing:.3cqw;color:var(--ps-coral)}
+.ph-week{font-size:1.9cqw;color:#c9c9f0;margin-top:.4cqw}
+.ph-title{font-family:var(--ps-display);font-weight:900;text-transform:uppercase;font-size:4.2cqw;line-height:.95;margin-top:1.2cqw}
+.ph-bar{height:.9cqw;background:rgba(255,255,255,.2);border-radius:1cqw;margin-top:2.2cqw;overflow:hidden}
+.ph-bar b{display:block;width:25%;height:100%;background:var(--ps-coral)}
+.ph-list{flex:1;min-height:0;overflow:hidden;padding:.8cqw 2.6cqw;display:flex;flex-direction:column;gap:.2cqw}
+.ph-ex{display:flex;align-items:center;gap:1.8cqw;padding:1.1cqw 0;border-bottom:1px solid #ececf2}
+.ph-ex span{flex:0 0 5cqw;height:5cqw;display:grid;place-items:center;background:var(--ps-grey);color:var(--ps-navy);font-weight:800;font-size:1.8cqw}
+.ph-ex.done span{background:var(--ps-coral);color:#fff}
+.ph-ex p{font-size:2cqw;font-weight:700;line-height:1.15}
+.ph-ex small{display:block;font-weight:500;color:var(--ps-muted);font-size:1.7cqw}
+.ph-go{flex-shrink:0;margin:1cqw 2.6cqw 3.4cqw;background:var(--ps-coral);color:#fff;text-align:center;font-weight:800;font-size:2.1cqw;padding:2cqw;border-radius:99px}
+.ph-note{position:absolute;right:-1%;top:44%;z-index:6;font-family:'Rock Salt',cursive;font-size:3.2cqw;color:#fff;transform:rotate(-8deg);line-height:1.3;text-shadow:0 .4cqw 1.2cqw rgba(0,0,0,.8)}
+.ph-note b{color:var(--ps-coral);font-weight:400}
+.ph-tag{position:absolute;left:-2%;top:46%;z-index:6;background:#fff;color:var(--ps-ink);font-weight:800;font-size:2.3cqw;padding:1.6cqw 2.6cqw;box-shadow:0 2cqw 5cqw rgba(0,0,0,.45);transform:rotate(-4deg);display:flex;align-items:center;gap:1.4cqw}
+.ph-tag i{width:3.6cqw;height:3.6cqw;border-radius:50%;background:var(--ps-coral);color:#fff;display:grid;place-items:center;font-style:normal;font-size:2cqw}
+@media (max-width:900px){
+  .ps-hero{padding:48px 0 60px}
+  .ps-hero .wrap{grid-template-columns:1fr;gap:34px}
+  .ph-col{margin:0 auto;max-width:520px}
+}
 
 /* program groups */
 .ps-programs{padding:64px 0}
@@ -161,17 +197,49 @@ body{background:var(--ps-grey);font-family:var(--ps-body);margin:0}
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO BANNER -->
 <div class="ps">
   <div class="ps-hero">
     <div class="wrap">
-      <span class="eyebrow">Primed Programs</span>
-      <h1>Looking to train like a Primed athlete?</h1>
-      <p class="lede">Find your perfect fit. Every Primed program is written by Em, built on the same principles as her 1:1 coaching, and delivered straight to your phone, so you can train with purpose wherever you are.</p>
-      <div class="ps-chips">
-        <span>Strength</span><span>Speed</span><span>Robustness</span><span>Off-season</span><span>Pre-season</span><span>In-season</span>
+      <div class="ph-copy">
+        <span class="eyebrow">Primed Programs</span>
+        <h1>Looking to train like a <em>Primed</em> athlete?</h1>
+        <p class="lede">Find your perfect fit. Every Primed program is written by Em, built on the same principles as her 1:1 coaching, and delivered straight to your phone, so you can train with purpose wherever you are.</p>
+        <div class="ps-chips">
+          <span>Strength</span><span>Speed</span><span>Robustness</span><span>Off-season</span><span>Pre-season</span><span>In-season</span>
+        </div>
+        <a class="ps-cta" href="#programs">Find your program</a>
       </div>
-      <a class="ps-cta" href="#programs">Find your program</a>
+
+      <div class="ph-col" aria-hidden="true">
+        <div class="ph-tile ph-t1"><img src="https://assets.cdn.filesafe.space/nubaK0PsylV60ixdEZ2W/media/6abc3628001f4ad24e6bf7e3.png" alt=""></div>
+        <div class="ph-tile ph-t2"><img src="https://assets.cdn.filesafe.space/nubaK0PsylV60ixdEZ2W/media/6abc90ed7f8e19690f6284f6.png" alt=""></div>
+        <div class="ph-tile ph-t3"><img src="https://assets.cdn.filesafe.space/nubaK0PsylV60ixdEZ2W/media/6abc88bef88ee1436cabfff7.png" alt=""></div>
+        <div class="ph-tile ph-t4"><img src="https://assets.cdn.filesafe.space/nubaK0PsylV60ixdEZ2W/media/6abc90ed10a2b7bc2b32d539.png" alt=""></div>
+
+        <div class="ph-phone">
+          <div class="ph-scr">
+            <div class="ph-top">
+              <div class="ph-status"><span>6:02</span><i></i><span>100%</span></div>
+              <div class="ph-brand">PRIMED BASE</div>
+              <div class="ph-week">Week 3 · Day 2</div>
+              <div class="ph-title">Lower strength<br>+ speed</div>
+              <div class="ph-bar"><b></b></div>
+            </div>
+            <div class="ph-list">
+              <div class="ph-ex done"><span>&#10003;</span><p>RAMP warm up<small>12 min</small></p></div>
+              <div class="ph-ex done"><span>&#10003;</span><p>Acceleration sprints<small>6 x 20m</small></p></div>
+              <div class="ph-ex"><span>B1</span><p>Trap bar deadlift<small>4 x 5</small></p></div>
+              <div class="ph-ex"><span>B2</span><p>Pogo hops<small>3 x 10</small></p></div>
+              <div class="ph-ex"><span>C1</span><p>Split squat<small>3 x 8 each</small></p></div>
+            </div>
+            <div class="ph-go">Continue workout</div>
+          </div>
+        </div>
+
+        <div class="ph-tag"><i>&#10003;</i>Session logged</div>
+        <div class="ph-note">straight to<br><b>your phone</b></div>
+      </div>
     </div>
   </div>
 </div>
