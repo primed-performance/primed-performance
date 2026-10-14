@@ -192,6 +192,24 @@ html,body{overflow-x:clip}
 .article-cta{background:var(--navy)}
 .cta-band .btn-white,.article-cta .btn-white{background:var(--coral);color:#fff}
 </style>
+<style id="discovery-call">
+/* Free discovery call buttons */
+.btn-call{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid #fff;color:#fff;background:transparent;margin:6px 0 6px 10px;transition:transform .15s ease,background .15s ease,color .15s ease}
+.btn-call:hover{transform:translateY(-2px);background:#fff;color:#0A0A0A}
+.btn-call-dark{border-color:#0A0A0A;color:#0A0A0A}
+.btn-call-dark:hover{background:#0A0A0A;color:#fff}
+.hero-ctas .btn-call,.t-card .btn-call{margin:0}
+.btn,.btn-call{vertical-align:middle}
+.btn-call-block{display:block;width:100%;text-align:center;margin:12px 0 0}
+.call-or{margin:18px 0 0;font-size:14px;color:#555;text-align:center}
+.float-cta{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.float-cta .btn-call-float,.pp-call-float .btn-call-float{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;background:#0A0A0A;color:#fff;border:2px solid #fff;box-shadow:0 12px 30px rgba(10,10,10,.35);transition:transform .15s ease}
+.btn-call-float:hover{transform:translateY(-2px)}
+.pp-call-float{position:fixed;right:20px;bottom:20px;z-index:60;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease;font-family:'Archivo',system-ui,sans-serif}
+.pp-call-float.show{opacity:1;pointer-events:auto;transform:none}
+@media (max-width:560px){.btn-call{margin:12px 0 0}.float-cta .btn,.float-cta .btn-call-float{padding:12px 20px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){.btn-call,.btn-call-float,.pp-call-float{transition:none}}
+</style>
 </head>
 <body>
 
@@ -392,6 +410,7 @@ html,body{overflow-x:clip}
       <div class="row">
         <a class="ps-btn coral" href="mailto:info@primedperformance.com.au?subject=Which%20Primed%20program%20fits%20me%3F">Ask Em which fits</a>
         <a class="ps-btn outline" href="services.html">Explore 1:1 coaching</a>
+        <a class="ps-btn outline" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a>
       </div>
       <p class="small">If you are in a position to, 1:1 coaching is always preferred so your training can be directed exactly to you.</p>
     </div>
@@ -416,5 +435,7 @@ if (mb) mb.addEventListener('click', function(){ document.getElementById('navLin
 var f = document.getElementById('ps-founding');
 if (f && Date.now() > new Date('2026-10-14T23:59:59+10:00').getTime()) f.style.display = 'none';
 </script>
+<div class="pp-call-float" id="ppCallFloat"><a class="btn-call-float" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a></div>
+<script>(function(){var el=document.getElementById('ppCallFloat');if(!el)return;function t(){el.classList.toggle('show',window.scrollY>700)}addEventListener('scroll',t,{passive:true});t()})();</script>
 </body>
 </html>

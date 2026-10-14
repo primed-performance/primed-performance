@@ -353,6 +353,39 @@ html,body{overflow-x:clip}
 @media (max-width:640px){.creds{padding:10px 0}.creds-in{font-size:11px;gap:6px 16px;letter-spacing:.04em}}
 .creds .pstar{color:var(--coral);width:1.1em;height:1.1em;margin:0}
 </style>
+<style id="discovery-call">
+/* Free discovery call buttons */
+.btn-call{display:inline-block;padding:16px 30px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:2px solid #fff;color:#fff;background:transparent;margin:6px 0 6px 10px;transition:transform .15s ease,background .15s ease,color .15s ease}
+.btn-call:hover{transform:translateY(-2px);background:#fff;color:#0A0A0A}
+.btn-call-dark{border-color:#0A0A0A;color:#0A0A0A}
+.btn-call-dark:hover{background:#0A0A0A;color:#fff}
+.hero-ctas .btn-call,.t-card .btn-call{margin:0}
+.btn,.btn-call{vertical-align:middle}
+.btn-call-block{display:block;width:100%;text-align:center;margin:12px 0 0}
+.call-or{margin:18px 0 0;font-size:14px;color:#555;text-align:center}
+.float-cta{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.float-cta .btn-call-float,.pp-call-float .btn-call-float{display:inline-block;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;background:#0A0A0A;color:#fff;border:2px solid #fff;box-shadow:0 12px 30px rgba(10,10,10,.35);transition:transform .15s ease}
+.btn-call-float:hover{transform:translateY(-2px)}
+.pp-call-float{position:fixed;right:20px;bottom:20px;z-index:60;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .3s ease,transform .3s ease;font-family:'Archivo',system-ui,sans-serif}
+.pp-call-float.show{opacity:1;pointer-events:auto;transform:none}
+@media (max-width:560px){.btn-call{margin:12px 0 0}.float-cta .btn,.float-cta .btn-call-float{padding:12px 20px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){.btn-call,.btn-call-float,.pp-call-float{transition:none}}
+</style>
+<style id="testimonial-faces">
+/* Testimonial action shots */
+.t-shot{display:block;width:100%;height:230px !important;flex:none;object-fit:cover;object-position:center 25%;border-radius:0;margin-bottom:4px}
+.t-card .t-shot{border-bottom:3px solid var(--coral,#FF4B33)}
+.proof-card .t-shot{border-bottom:3px solid var(--navy,#000097);margin-bottom:18px}
+.t-card .who{margin-top:auto}
+</style>
+<style id="testimonial-wins">
+/* Achievement ticks under each testimonial */
+.t-wins{list-style:none;margin:2px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.t-wins li{position:relative;padding-left:30px;font-size:14.5px;font-weight:600;line-height:1.35;font-style:normal}
+.t-wins li::before{content:"\2713";position:absolute;left:0;top:0;width:20px;height:20px;display:grid;place-items:center;font-size:12px;font-weight:900;color:#fff;background:var(--coral,#FF4B33);border-radius:0}
+.proof-card .t-wins li::before{background:var(--navy,#000097)}
+.t-card .t-wins li{color:#fff}
+</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -439,6 +472,7 @@ html,body{overflow-x:clip}
     <p class="lede">Most athletes train hard. <strong>Very few train smart.</strong> Primed gives developing athletes the same evidence-based coaching elite athletes get, built around your sport, your schedule and your goals.</p>
     <div class="hero-ctas">
       <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for 1:1 coaching</a>
+      <a class="btn-call" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a>
       <a class="btn btn-outline-light" href="programs.html">Shop programs</a>
     </div>
     <p class="hero-quiz">Not sure where to start? <a href="https://go.acr.fit/widget/quiz/vYTkI7XVkh5PCKWyzMx7" target="_blank" rel="noopener">Take the free Performance Leak Quiz &rarr;</a></p>
@@ -488,7 +522,7 @@ html,body{overflow-x:clip}
       <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-coaching"/></svg><span class="num">Step 5</span><h3>Coaching &amp; execution</h3><p>This is not a program-only service. You engage directly with a university-qualified exercise and sport scientist, with weekly check-ins and video feedback.</p></div>
       <div class="step"><svg class="dicon" viewBox="0 0 64 64" aria-hidden="true"><use href="#ic-results"/></svg><span class="num">Step 6</span><h3>Review &amp; progress</h3><p>Depending on your membership level, we connect monthly or fortnightly to review progress, refine programming and plan upcoming phases for long-term development.</p></div>
     </div>
-    <div class="cta-row"><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></div>
+    <div class="cta-row"><a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a><a class="btn-call" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a></div>
   </div>
 </section>
 
@@ -558,12 +592,13 @@ html,body{overflow-x:clip}
     <span class="eyebrow" style="color:var(--coral)">#GetPrimed</span>
     <h2>Hear from our <em>athletes</em></h2>
     <div class="proof-grid">
-      <div class="t-card"><p>"The programming and videos work really well for me. I could do it at my own pace, and I've noticed a big difference in my basketball game. It's all positive."</p><span class="who">Jazzy · NSW country basketballer</span></div>
-      <div class="t-card"><p>"I have loved Em's coaching! I have developed so much this year already with strength, technique and confidence in my training, all thanks to Em!"</p><span class="who">Piper · middle distance track athlete</span></div>
-      <div class="t-card"><p>"Emily's coaching has helped my game so much. I'm stronger on the court and faster in my lateral and vertical movements. She really knows her stuff."</p><span class="who">Cohen · NSW country basketballer</span></div>
-      <div class="t-card"><p>"As an older woman with ongoing injuries, joining Em has been fantastic. She's very knowledgeable and always tailors alternative exercises to suit my needs."</p><span class="who">Lisa · recreational long distance runner</span></div>
-      <div class="t-card"><p>"Would highly recommend this program for any aspiring young athlete. Emily has a high level of expertise in optimising training for each athlete's chosen sport."</p><span class="who">Aydan · Sydney grade cricketer</span></div>
-      <div class="t-card" style="justify-content:center;align-items:flex-start"><p style="font-style:normal;font-weight:800;font-size:22px;text-transform:uppercase">Ready to write your own?</p><a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a></div>
+      <div class="t-card"><img class="t-shot" src="images/testimonial-jazzy.jpg" alt="Jazzy in action" width="800" height="600" loading="lazy" onerror="this.remove()"><p>"The programming and videos work really well for me. I could do it at my own pace, and I've noticed a big difference in my basketball game. It's all positive."</p><span class="who">Jazzy · NSW country basketballer</span><ul class="t-wins"><li>U18s state basketball team</li><li>She Hoops Australia team</li><li>National Indigenous Performance Camp at the AIS</li></ul></div>
+      <div class="t-card"><img class="t-shot" src="images/testimonial-piper.jpg" alt="Piper in action" width="800" height="600" loading="lazy" onerror="this.remove()"><p>"I have loved Em's coaching! I have developed so much this year already with strength, technique and confidence in my training, all thanks to Em!"</p><span class="who">Piper · middle distance track athlete</span><ul class="t-wins"><li>Smashed her 400m PB (main event) by 4 seconds</li><li>PBs in the 100m and 200m</li></ul></div>
+      <div class="t-card"><img class="t-shot" src="images/testimonial-cohen.jpg" alt="Cohen in action" width="800" height="600" loading="lazy" onerror="this.remove()"><p>"Emily's coaching has helped my game so much. I'm stronger on the court and faster in my lateral and vertical movements. She really knows her stuff."</p><span class="who">Cohen · NSW country basketballer</span><ul class="t-wins"><li>First U18s state basketball team selection</li></ul></div>
+      <div class="t-card"><img class="t-shot" src="images/testimonial-lisa.jpg" alt="Lisa in action" width="800" height="600" loading="lazy" onerror="this.remove()"><p>"As an older woman with ongoing injuries, joining Em has been fantastic. She's very knowledgeable and always tailors alternative exercises to suit my needs."</p><span class="who">Lisa · recreational long distance runner</span><ul class="t-wins"><li>Completed a 21km half marathon</li></ul></div>
+      <div class="t-card"><img class="t-shot" src="images/testimonial-aydan.jpg" alt="Aydan in action" width="800" height="600" loading="lazy" onerror="this.remove()"><p>"Would highly recommend this program for any aspiring young athlete. Emily has a high level of expertise in optimising training for each athlete's chosen sport."</p><span class="who">Aydan · Sydney grade cricketer</span><ul class="t-wins"><li>2025 Sydney grade cricket debut</li><li>2026 Sydney 1st grade debut</li></ul></div>
+      <div class="t-card" style="justify-content:center;align-items:flex-start"><p style="font-style:normal;font-weight:800;font-size:22px;text-transform:uppercase">Ready to write your own?</p><a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
+    <a class="btn-call" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a></div>
     </div>
   </div>
 </section>
@@ -606,6 +641,7 @@ html,body{overflow-x:clip}
     <h2>Ready to get primed?</h2>
     <p>Tell me about you, your sport and your goals, and let's see if we're the right fit for each other.</p>
     <a class="btn btn-white" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
+    <a class="btn-call" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a>
   </div>
 </section>
 
@@ -629,6 +665,7 @@ html,body{overflow-x:clip}
       <div>
         <h4>Connect</h4>
         <ul>
+          <li><a href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a></li>
           <li><a href="mailto:info@primedperformance.com.au">info@primedperformance.com.au</a></li>
           <li><a href="https://www.instagram.com/primed.performance/">Instagram @primed.performance</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=100090599381976">Facebook</a></li>
@@ -644,6 +681,7 @@ html,body{overflow-x:clip}
 </footer>
 
 <div class="float-cta" id="floatCta">
+  <a class="btn-call-float" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a>
   <a class="btn btn-coral" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC">Apply for coaching</a>
 </div>
 
