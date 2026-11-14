@@ -544,7 +544,7 @@ if (f && Date.now() > new Date('2026-10-14T23:59:59+10:00').getTime()) f.style.d
   var imgs=document.querySelectorAll(sel);
   var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>.55){e.target.classList.add('live');io.unobserve(e.target)}})},{threshold:[.55]}):null;
   imgs.forEach(function(img){
-    if(img.closest('.ht'))return;
+    if(img.closest('.ht')||getComputedStyle(img).position==='absolute')return;
     var w=document.createElement('span');w.className='ht';
     var cs=getComputedStyle(img);
     ['gridColumn','gridRow','alignSelf','justifySelf','width','maxWidth'].forEach(function(k){if(cs[k]&&k!=='width')w.style[k]=cs[k]});

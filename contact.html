@@ -256,7 +256,12 @@ footer a:hover{color:var(--coral)}
 .contact-info h3{font-size:22px;font-weight:800;text-transform:uppercase;margin-bottom:8px}
 .contact-info .row{display:flex;gap:14px;align-items:flex-start;margin-bottom:22px}
 .contact-info .row svg{width:26px;height:26px;color:var(--coral);flex-shrink:0;margin-top:2px}
-.contact-embed{background:var(--grey);border-radius:var(--radius);padding:34px;min-height:520px}
+.contact-embed{background:var(--grey);border-radius:var(--radius);padding:34px}
+.start-steps{list-style:none;padding:0;margin:0 0 24px;display:grid;gap:12px}
+.start-steps li{display:flex;gap:14px;align-items:flex-start;background:#fff;padding:14px 16px;border-left:3px solid var(--coral)}
+.start-steps b{font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;font-size:24px;line-height:1;color:var(--coral);min-width:28px}
+.start-steps span{font-size:15.5px;line-height:1.5;color:#333}
+.btn-block{display:flex;width:100%;justify-content:center;text-align:center}
 
 @media (max-width:900px){
   .split,.contact-grid{grid-template-columns:1fr}
@@ -474,9 +479,12 @@ h1,h2{letter-spacing:.005em;line-height:1.02}
     <div class="contact-embed">
       <h3 style="font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:26px;margin-bottom:8px">Start here</h3>
       <p style="color:#555;margin-bottom:20px">Tell me about you and your goals. I'll personally be in touch within 24 to 48 hours.</p>
-      <iframe src="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC" id="UqU9fsncXmGqZTIeD7CC" title="Primed Performance expression of interest" scrolling="no" style="border:none;width:100%;min-height:640px;display:block;background:#fff"></iframe>
-      <script src="https://go.acr.fit/js/form_embed.js"></script>
-      <p class="form-fallback">Form not loading? <a href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC" target="_blank" rel="noopener">Open it in a new tab</a></p>
+      <ul class="start-steps">
+        <li><b>01</b><span>Answer a few quick questions about you, your training and your goals. It takes about 3 minutes.</span></li>
+        <li><b>02</b><span>Em personally reviews your answers and gets back to you within 24 to 48 hours.</span></li>
+        <li><b>03</b><span>We work out the best fit for you, then get your program started.</span></li>
+      </ul>
+      <a class="btn btn-coral btn-block" href="https://go.acr.fit/widget/survey/UqU9fsncXmGqZTIeD7CC" target="_blank" rel="noopener">Start here</a>
       <p class="call-or">Prefer to chat first? Book a free 15 minute call with Em.</p>
       <a class="btn-call btn-call-dark btn-call-block" href="https://go.acr.fit/widget/booking/8GlpaBJiw6dQshozNqg6" target="_blank" rel="noopener">Book a free discovery call</a>
     </div>
@@ -548,7 +556,7 @@ addEventListener('scroll', () => {
   var imgs=document.querySelectorAll(sel);
   var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>.55){e.target.classList.add('live');io.unobserve(e.target)}})},{threshold:[.55]}):null;
   imgs.forEach(function(img){
-    if(img.closest('.ht'))return;
+    if(img.closest('.ht')||getComputedStyle(img).position==='absolute')return;
     var w=document.createElement('span');w.className='ht';
     var cs=getComputedStyle(img);
     ['gridColumn','gridRow','alignSelf','justifySelf','width','maxWidth'].forEach(function(k){if(cs[k]&&k!=='width')w.style[k]=cs[k]});

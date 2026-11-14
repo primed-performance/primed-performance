@@ -639,10 +639,17 @@ h1,h2{letter-spacing:.005em;line-height:1.02}
       <p class="ip-note">Not on the Sunshine Coast? Online coaching above works wherever you are.</p>
     </div>
 
-    <div class="ip-card ip-card-form">
-      <iframe src="https://go.acr.fit/widget/form/0IkznrMBAZUyWXurD02d" id="0IkznrMBAZUyWXurD02d" title="Sunshine Coast in-person waitlist" scrolling="no" style="border:none;width:100%;min-height:900px;display:block;background:#fff"></iframe>
-      <script src="https://go.acr.fit/js/form_embed.js"></script>
-      <small>Form not loading? <a href="https://go.acr.fit/widget/form/0IkznrMBAZUyWXurD02d" target="_blank" rel="noopener">Open it in a new tab</a></small>
+    <div class="ip-card">
+      <span class="tag">Waitlist open</span>
+      <h3>Get first access</h3>
+      <p>Pop your details in and you'll hear about times, pricing and locations before anyone else. No commitment.</p>
+      <ul>
+        <li>First pick of session times</li>
+        <li>Times, pricing and locations sent to you first</li>
+        <li>Open to adults and youth athletes</li>
+      </ul>
+      <a class="btn btn-coral" href="https://go.acr.fit/widget/form/0IkznrMBAZUyWXurD02d" target="_blank" rel="noopener">Join the waitlist</a>
+      <small>Spots are limited and filled in waitlist order.</small>
     </div>
   </div>
 </section>
@@ -756,7 +763,7 @@ addEventListener('scroll', () => {
   var imgs=document.querySelectorAll(sel);
   var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>.55){e.target.classList.add('live');io.unobserve(e.target)}})},{threshold:[.55]}):null;
   imgs.forEach(function(img){
-    if(img.closest('.ht'))return;
+    if(img.closest('.ht')||getComputedStyle(img).position==='absolute')return;
     var w=document.createElement('span');w.className='ht';
     var cs=getComputedStyle(img);
     ['gridColumn','gridRow','alignSelf','justifySelf','width','maxWidth'].forEach(function(k){if(cs[k]&&k!=='width')w.style[k]=cs[k]});

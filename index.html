@@ -572,6 +572,82 @@ h1,h2{letter-spacing:.005em;line-height:1.02}
 .ip-pill span{white-space:nowrap}
 @media(max-width:600px){.ip-pill{font-size:12.5px;gap:8px}.ip-pill span{white-space:normal}}
 </style>
+<style id="speed-test">
+.st{position:relative;z-index:1;text-align:center}
+.st [data-stage]{display:none}
+.st[data-at="intro"] [data-stage="intro"],.st[data-at="run"] [data-stage="run"],.st[data-at="result"] [data-stage="result"]{display:block;animation:stIn .35s ease both}
+@keyframes stIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.st-mate{background:#fff;color:var(--navy);font-weight:800;font-size:15px;padding:12px 14px;margin:0 0 18px;border-left:4px solid var(--coral)}
+/* intro teaser */
+.st-teaser{display:flex;flex-direction:column;align-items:center;gap:12px;margin:4px 0 24px;padding:20px 16px 18px;background:#05053a;border:2px solid rgba(255,255,255,.12);position:relative;overflow:hidden}
+.st-teaser::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(255,255,255,.05) 46px 48px);pointer-events:none}
+.st-teaser .st-lights i{animation:stSeq 3.2s infinite}
+.st-teaser .st-lights i:nth-child(2){animation-delay:.25s}.st-teaser .st-lights i:nth-child(3){animation-delay:.5s}.st-teaser .st-lights i:nth-child(4){animation-delay:.75s}.st-teaser .st-lights i:nth-child(5){animation-delay:1s}
+@keyframes stSeq{0%,8%{background:rgba(255,255,255,.12);box-shadow:none}12%,55%{background:#fff;box-shadow:0 0 16px #fff,0 0 34px rgba(255,255,255,.4)}62%,80%{background:var(--coral);box-shadow:0 0 18px var(--coral),0 0 40px rgba(255,75,51,.6)}88%,100%{background:rgba(255,255,255,.12);box-shadow:none}}
+.st-ghost{font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;font-size:44px;line-height:1;color:rgba(255,255,255,.9);letter-spacing:.02em;position:relative}
+.st-ghost small{font-size:.42em;color:#a9aad8;margin-left:4px}
+.st-start{animation:stPulse 2.2s ease-in-out infinite}
+@keyframes stPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,75,51,.55)}50%{box-shadow:0 0 0 12px rgba(255,75,51,0)}}
+/* lights */
+.st-lights{display:flex;gap:12px;justify-content:center}
+.st-lights i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.12);border:2px solid rgba(255,255,255,.18);transition:background .12s,box-shadow .12s,border-color .12s}
+.st-lights i.on{background:#fff;border-color:#fff;box-shadow:0 0 16px #fff,0 0 34px rgba(255,255,255,.45)}
+/* run */
+.st-runs{display:flex;justify-content:center;gap:8px;margin-bottom:10px}
+.st-runs span{flex:1;max-width:120px;padding:9px 8px;background:rgba(255,255,255,.07);font-size:13.5px;font-weight:800;letter-spacing:.04em;color:#a9aad8;border-bottom:3px solid transparent;transition:all .25s}
+.st-runs span.cur{color:#fff;border-bottom-color:rgba(255,255,255,.6)}
+.st-runs span.done{background:rgba(255,75,51,.16);color:#fff;border-bottom-color:var(--coral)}
+.st-pad{position:relative;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:manipulation;cursor:pointer;height:290px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:radial-gradient(ellipse at 50% 120%,#1a1a8a 0%,#05053a 60%);border:2px solid rgba(255,255,255,.16);margin:0 0 14px;transition:background .08s,border-color .08s}
+.st-pad::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 58px,rgba(255,255,255,.045) 58px 60px);pointer-events:none}
+.st-pad::after{content:"";position:absolute;left:0;right:0;bottom:16px;height:3px;background:rgba(255,255,255,.18);pointer-events:none}
+.st-pad>*{position:relative;z-index:1}
+.st-pad:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.st-clock{font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;font-size:clamp(46px,11vw,66px);line-height:1;color:rgba(255,255,255,.22);letter-spacing:.02em;font-variant-numeric:tabular-nums}
+.st-call{font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(26px,6vw,36px);line-height:1;color:#fff;letter-spacing:.02em}
+.st-sub{font-size:14px;color:#cfd0f2;min-height:18px}
+.st-pad[data-s="go"]{background:var(--coral);border-color:#fff;animation:stShake .28s linear}
+.st-pad[data-s="go"]::before{background:repeating-linear-gradient(90deg,transparent 0 58px,rgba(255,255,255,.12) 58px 60px)}
+.st-pad[data-s="go"] .st-lights i{background:#fff;box-shadow:0 0 20px #fff,0 0 44px #fff}
+.st-pad[data-s="go"] .st-clock{color:#fff}
+.st-pad[data-s="go"] .st-call{font-size:clamp(54px,13vw,84px)}
+.st-pad[data-s="hit"] .st-clock{color:#fff;animation:stPop .35s ease}
+.st-pad[data-s="early"]{background:#3a0d0d;border-color:var(--coral);animation:stShake .3s linear}
+.st-pad[data-s="early"] .st-call{color:var(--coral)}
+@keyframes stShake{0%,100%{transform:translate(0)}20%{transform:translate(-5px,2px)}40%{transform:translate(5px,-2px)}60%{transform:translate(-3px,1px)}80%{transform:translate(3px,-1px)}}
+@keyframes stPop{0%{transform:scale(1.25)}100%{transform:scale(1)}}
+/* result */
+.st-gauge{width:100%;max-width:300px;margin:4px auto -6px;display:block;overflow:visible}
+.st-gauge .needle{transform-origin:150px 150px;transition:transform 1.1s cubic-bezier(.2,1.4,.4,1)}
+.st-time{font-family:'Anton','Work Sans',sans-serif;font-stretch:62%;font-weight:900;font-size:clamp(66px,17vw,98px);line-height:.95;color:#fff;margin:0 0 10px;font-variant-numeric:tabular-nums}
+.st-time small{font-size:.36em;color:#cfd0f2;margin-left:4px}
+.st-tier{display:inline-block;background:var(--coral);color:#fff;font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;margin-bottom:14px;transform:rotate(-3deg);box-shadow:0 8px 20px rgba(255,75,51,.35)}
+.st[data-at="result"] .st-tier{animation:stStamp .5s .9s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes stStamp{0%{opacity:0;transform:scale(2.4) rotate(-12deg)}100%{opacity:1;transform:scale(1) rotate(-3deg)}}
+.st-mate-res{color:#fff;font-weight:800;font-size:16px;margin:0 0 12px}
+.st-blurb{font-size:15.5px;color:#dcdcf0;margin:0 0 20px}
+.st-bars{text-align:left;margin:0 0 22px;display:grid;gap:9px}
+.st-bar{display:grid;grid-template-columns:118px 1fr 52px;align-items:center;gap:10px;font-size:13px;color:#cfd0f2}
+.st-bar div{height:10px;background:rgba(255,255,255,.1)}
+.st-bar div b{display:block;height:100%;background:rgba(255,255,255,.55);width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.st-bar.you{color:#fff;font-weight:700}
+.st-bar.you div b{background:var(--coral);box-shadow:0 0 12px rgba(255,75,51,.7)}
+.st-bar em{font-style:normal;text-align:right}
+.st-actions{display:grid;gap:10px}
+.st-actions .btn{width:100%;text-align:center}
+.st-row{display:flex;gap:10px}
+.st-row button{flex:1;background:none;border:2px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;padding:12px 10px;font-weight:700;font-size:14.5px;cursor:pointer;font-family:inherit}
+.st-row button:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.st-note{font-size:12.5px;color:#a9aad8;margin:14px 0 0}
+.st-note a{color:#fff}
+/* star burst */
+.st-burst{position:absolute;left:50%;top:150px;width:0;height:0;pointer-events:none;z-index:5}
+.st-burst span{position:absolute;width:var(--s);height:var(--s);margin:calc(var(--s)/-2);background:url('images/star-coral.png') center/contain no-repeat;animation:stFly 1.2s cubic-bezier(.15,.7,.3,1) forwards}
+.st-burst span.w{background-image:url('images/star-white.png')}
+@keyframes stFly{0%{transform:translate(0,0) rotate(0) scale(.3);opacity:1}100%{transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1);opacity:0}}
+.lead-card.st-card{max-width:520px;padding:44px 34px 32px}
+@media(max-width:480px){.lead-card.st-card{padding:40px 18px 24px}.st-pad{height:260px}.st-bar{grid-template-columns:100px 1fr 46px}.st-lights i{width:24px;height:24px}}
+@media(prefers-reduced-motion:reduce){.st-teaser .st-lights i,.st-start,.st-pad[data-s="go"],.st-pad[data-s="early"],.st-burst span{animation:none!important}}
+</style>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -967,30 +1043,71 @@ addEventListener('scroll', () => {
   fc.classList.toggle('show', scrollY > 700);
 }, { passive: true });
 
-// Performance Leak Assessment popup, shows once per session, ~6s after landing
-(function(){
+// Reaction test popup, shows once per session, ~5s after landing
+document.addEventListener('DOMContentLoaded', function(){
   const modal = document.getElementById('leadModal');
   if(!modal) return;
   const shown = sessionStorage.getItem('ppLeadShown');
   function open(){ modal.classList.add('open'); }
-  function close(){ modal.classList.remove('open'); sessionStorage.setItem('ppLeadShown','1'); }
-  if(!shown){ setTimeout(open, 6000); }
-  modal.querySelector('.lead-close').addEventListener('click', close);
+  function close(){ modal.classList.remove('open'); sessionStorage.setItem('ppLeadShown','1'); if(window.ppSpeedTestReset) ppSpeedTestReset(); }
+  if(!shown){ setTimeout(open, 5000); }
+  modal.querySelectorAll('.lead-close,.lead-dismiss').forEach(b => b.addEventListener('click', close));
   modal.querySelector('.lead-backdrop').addEventListener('click', close);
   document.addEventListener('keydown', e => { if(e.key==='Escape') close(); });
   modal.querySelector('.lead-cta').addEventListener('click', () => sessionStorage.setItem('ppLeadShown','1'));
-})();
+});
 </script>
 
 <div class="lead-modal" id="leadModal">
   <div class="lead-backdrop"></div>
-  <div class="lead-card">
+  <div class="lead-card st-card">
     <button class="lead-close" aria-label="Close">&times;</button>
-    <span class="lead-eyebrow">Free · 2 minutes <span class="pstar" aria-hidden="true"></span></span>
-    <h3>What's your <em>performance leak?</em></h3>
-    <p>Everyone has a weak link quietly costing them speed, strength or durability. Take the free assessment, see where you rank, and get takeaways you can action today.</p>
-    <a class="btn btn-coral lead-cta" href="https://go.acr.fit/widget/quiz/vYTkI7XVkh5PCKWyzMx7">Take the free assessment</a>
-    <button class="lead-dismiss lead-close">No thanks, maybe later</button>
+    <div class="st" data-at="intro" id="speedTest">
+  <div data-stage="intro">
+    <div class="st-mate" style="display:none"></div>
+    <span class="lead-eyebrow">Free · 30 seconds <span class="pstar" aria-hidden="true"></span></span>
+    <h3>How quick are your <em>reactions</em>?</h3>
+    <p>Quick reactions help you win the ball, beat the gun and catch yourself when you trip. Tap the moment the lights go coral, 3 rounds, and see how you stack up.</p>
+    <div class="st-teaser" aria-hidden="true"><div class="st-lights"><i></i><i></i><i></i><i></i><i></i></div><div class="st-ghost">0.000<small>sec</small></div></div>
+    <button class="btn btn-coral lead-cta st-start" type="button">Take the reaction test</button>
+    <button class="lead-dismiss" type="button">No thanks, maybe later</button>
+  </div>
+  <div data-stage="run">
+    <div class="st-runs"><span>Round 1</span><span>Round 2</span><span>Round 3</span></div>
+    <div class="st-pad" data-s="wait" tabindex="0" role="button" aria-label="Reaction pad. Tap or press space when it turns coral.">
+      <div class="st-lights"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="st-clock">0.000</div>
+      <div class="st-call">Tap to start</div>
+      <div class="st-sub">Tap anywhere in the box, or press space</div>
+    </div>
+  </div>
+  <div data-stage="result">
+    <div class="st-burst"></div>
+    <span class="lead-eyebrow">Your best reaction</span>
+    <svg class="st-gauge" viewBox="0 0 300 170" aria-hidden="true">
+      <defs><linearGradient id="stg" x1="0" x2="1"><stop offset="0" stop-color="#3b3b9e"/><stop offset=".6" stop-color="#ffffff"/><stop offset="1" stop-color="#FF4B33"/></linearGradient></defs>
+      <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="rgba(255,255,255,.1)" stroke-width="18"/>
+      <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="url(#stg)" stroke-width="18" stroke-dasharray="4 3"/>
+      <text x="22" y="168" fill="#a9aad8" font-size="12" font-weight="700" font-family="Work Sans,sans-serif">SLOW</text>
+      <text x="246" y="168" fill="#FF4B33" font-size="12" font-weight="700" font-family="Work Sans,sans-serif">ELITE</text>
+      <g class="needle" transform="rotate(-90 150 150)"><line x1="150" y1="150" x2="150" y2="42" stroke="#fff" stroke-width="5" stroke-linecap="round"/><circle cx="150" cy="150" r="11" fill="#FF4B33" stroke="#fff" stroke-width="3"/></g>
+    </svg>
+    <div class="st-time"><span class="st-best">0.000</span><small>sec</small></div>
+    <div class="st-tier"></div>
+    <div class="st-mate-res" style="display:none"></div>
+    <p class="st-blurb"></p>
+    <div class="st-bars">
+      <div class="st-bar"><span>Elite athlete</span><div><b data-w="0.15"></b></div><em>0.15s</em></div>
+      <div class="st-bar you"><span>You</span><div><b class="st-youbar"></b></div><em class="st-youtxt"></em></div>
+      <div class="st-bar"><span>Average adult</span><div><b data-w="0.27"></b></div><em>0.27s</em></div>
+    </div>
+    <div class="st-actions">
+      <a class="btn btn-coral" href="https://go.acr.fit/widget/form/GUVgKPA6gPGifwITG8fz" target="_blank" rel="noopener">Get sharper: free weekly training tips</a>
+      <div class="st-row"><button type="button" class="st-again">Try again</button><button type="button" class="st-share">Challenge a mate</button></div>
+    </div>
+    <p class="st-note">Phones and screens add a little delay, so your real reactions are likely even quicker. Want the bigger picture? <a href="https://go.acr.fit/widget/quiz/vYTkI7XVkh5PCKWyzMx7" target="_blank" rel="noopener">Find your performance leak</a>.</p>
+  </div>
+</div>
   </div>
 </div>
 
@@ -1034,7 +1151,7 @@ addEventListener('scroll', () => {
   var imgs=document.querySelectorAll(sel);
   var io=('IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&e.intersectionRatio>.55){e.target.classList.add('live');io.unobserve(e.target)}})},{threshold:[.55]}):null;
   imgs.forEach(function(img){
-    if(img.closest('.ht'))return;
+    if(img.closest('.ht')||getComputedStyle(img).position==='absolute')return;
     var w=document.createElement('span');w.className='ht';
     var cs=getComputedStyle(img);
     ['gridColumn','gridRow','alignSelf','justifySelf','width','maxWidth'].forEach(function(k){if(cs[k]&&k!=='width')w.style[k]=cs[k]});
@@ -1065,5 +1182,88 @@ addEventListener('scroll', () => {
   addEventListener('load',function(){layout();tick()});
 })();
 </script>
+<script id="speed-test-js">
+(function(){
+  var root=document.getElementById('speedTest'); if(!root) return;
+  var pad=root.querySelector('.st-pad'),call=pad.querySelector('.st-call'),sub=pad.querySelector('.st-sub'),clock=pad.querySelector('.st-clock'),lights=pad.querySelectorAll('.st-lights i'),runs=root.querySelectorAll('.st-runs span');
+  var times=[],state='wait',t0=0,timers=[],raf=0;
+  var q=new URLSearchParams(location.search),mate=parseFloat(q.get('beat'));if(!(mate>0.05&&mate<2))mate=0;
+  var mt=root.querySelector('.st-mate');
+  if(mate&&mt){mt.textContent='Your mate got '+mate.toFixed(3)+'s'+(q.get('tier')?' ('+q.get('tier').replace(/[<>]/g,'').slice(0,20)+')':'')+'. Can you beat it?';mt.style.display='block'}
+  function clear(){timers.forEach(clearTimeout);timers=[];cancelAnimationFrame(raf)}
+  function lit(n){lights.forEach(function(l,k){l.classList.toggle('on',k<n)})}
+  function set(s,c,d){state=s;pad.setAttribute('data-s',s);call.textContent=c;sub.textContent=d||''}
+  function stage(s){root.setAttribute('data-at',s)}
+  function cur(){runs.forEach(function(r,k){r.classList.toggle('cur',k===times.length&&!r.classList.contains('done'))})}
+  function reset(){times=[];runs.forEach(function(r,i){r.textContent='Round '+(i+1);r.classList.remove('done')});clock.textContent='0.000';lit(0);set('wait','Tap to start','Tap anywhere in the box, or press space');cur()}
+  function tick(){clock.textContent=((performance.now()-t0)/1000).toFixed(3);raf=requestAnimationFrame(tick)}
+  function begin(){
+    clear();clock.textContent='0.000';lit(0);cur();
+    set('marks','On your marks','Hold steady...');
+    for(var k=1;k<=5;k++)(function(k){timers.push(setTimeout(function(){lit(k);if(k===3)set('set','Set','Wait for coral...')},k*420))})(k);
+    timers.push(setTimeout(function(){lit(5);set('go','GO!','');t0=performance.now();raf=requestAnimationFrame(tick);if(navigator.vibrate)try{navigator.vibrate(30)}catch(e){}},2100+900+Math.random()*2200));
+  }
+  function tap(){
+    if(state==='wait'||state==='hit'){begin();return}
+    if(state==='marks'||state==='set'){clear();lit(0);clock.textContent='0.000';set('early','False start!','You went before the lights. Tap to go again.');return}
+    if(state==='early'){begin();return}
+    if(state==='go'){
+      cancelAnimationFrame(raf);
+      var t=(performance.now()-t0)/1000;
+      if(t<0.1){lit(0);clock.textContent='0.000';set('early','False start!','That was a guess, not a reaction. Tap to go again.');return}
+      times.push(t);clock.textContent=t.toFixed(3);lit(0);
+      var r=runs[times.length-1];r.textContent=t.toFixed(3)+'s';r.classList.add('done');r.classList.remove('cur');
+      if(times.length<3){set('hit',times.length===1?'Nice!':'Sharp!',times.length===1?'Tap for round 2':'Last one. Tap for round 3')}
+      else{set('done','Done!','Crunching your numbers...');setTimeout(show,800)}
+    }
+  }
+  var tiers=[
+    [0.19,'Lightning','Elite-level reactions. Now make sure your strength and speed can keep up with your brain.',26],
+    [0.24,'Sharp','Quicker than most. Pair it with strength and power training and you\'ll be first to the ball, the line or the catch.',18],
+    [0.30,'Steady','Solid reactions for sport and everyday life. The right training keeps them sharp and makes them quicker.',10],
+    [9,'Room to grow','Good news: reactions and quickness respond well to training, at any age. You have the most to gain.',8]
+  ];
+  function w(v){return Math.max(8,Math.min(100,(1-(v-0.1)/0.4)*100))}
+  function burst(n){
+    var b=root.querySelector('.st-burst');b.innerHTML='';
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    for(var k=0;k<n;k++){var s=document.createElement('span');var a=Math.random()*Math.PI*2,d=90+Math.random()*170;
+      s.style.setProperty('--x',Math.cos(a)*d+'px');s.style.setProperty('--y',(Math.sin(a)*d-40)+'px');s.style.setProperty('--r',(Math.random()*540-270)+'deg');s.style.setProperty('--s',(10+Math.random()*16)+'px');
+      if(k%3===0)s.className='w';s.style.animationDelay=(Math.random()*.15)+'s';b.appendChild(s)}
+  }
+  function show(){
+    var best=Math.min.apply(null,times),tier=tiers.find(function(x){return best<x[0]});
+    var el=root.querySelector('.st-best');
+    root.querySelector('.st-tier').textContent=tier[1];
+    root.querySelector('.st-blurb').textContent=tier[2];
+    root.querySelector('.st-youtxt').textContent=best.toFixed(2)+'s';
+    var mb=root.querySelector('.st-mate-res');
+    if(mate&&mb){var d=Math.abs(best-mate).toFixed(3);mb.textContent=best<mate?('You beat your mate by '+d+'s. Send it back to them!'):(best>mate?('Your mate wins by '+d+'s. Try again?'):'Dead heat with your mate!');mb.style.display='block'}
+    root.dataset.best=best.toFixed(3);root.dataset.tier=tier[1];
+    var needle=root.querySelector('.needle');needle.style.transform='rotate(-90deg)';
+    var bars=root.querySelectorAll('.st-bar b');bars.forEach(function(b){b.style.width='0'});
+    stage('result');
+    var start=performance.now(),from=0.999;
+    (function roll(){var p=Math.min(1,(performance.now()-start)/900),e=1-Math.pow(1-p,3);el.textContent=(from+(best-from)*e).toFixed(3);if(p<1)requestAnimationFrame(roll)})();
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      var frac=Math.max(0,Math.min(1,(0.40-best)/0.30));needle.style.transform='rotate('+(-90+180*frac)+'deg)';
+      bars.forEach(function(b){var v=b.classList.contains('st-youbar')?best:parseFloat(b.getAttribute('data-w'));b.style.width=w(v)+'%'});
+    })});
+    setTimeout(function(){burst(tier[3])},950);
+  }
+  pad.addEventListener('pointerdown',function(e){e.preventDefault();tap()});
+  pad.addEventListener('keydown',function(e){if(e.key===' '||e.key==='Enter'){e.preventDefault();tap()}});
+  root.querySelector('.st-start').addEventListener('click',function(){reset();stage('run');setTimeout(function(){pad.focus()},50)});
+  root.querySelector('.st-again').addEventListener('click',function(){reset();stage('run');pad.focus()});
+  root.querySelector('.st-share').addEventListener('click',function(){
+    var url='https://primedperformance.com.au/speed-test.html?beat='+root.dataset.best+'&tier='+encodeURIComponent(root.dataset.tier);
+    var txt='I got '+root.dataset.best+'s ('+root.dataset.tier+') on the Primed Performance reaction test. Think you can beat me?';
+    if(navigator.share){navigator.share({title:'Primed reaction test',text:txt,url:url}).catch(function(){})}
+    else if(navigator.clipboard){navigator.clipboard.writeText(txt+' '+url).then(function(){var b=root.querySelector('.st-share');b.textContent='Copied! Send it';setTimeout(function(){b.textContent='Challenge a mate'},2000)})}
+  });
+  window.ppSpeedTestReset=function(){clear();reset();stage('intro')};
+})();
+</script>
+
 </body>
 </html>
